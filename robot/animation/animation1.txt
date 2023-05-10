@@ -1,0 +1,964 @@
+Frame 0
+Location: <Vector (0.0000, 0.0009, 0.1500)>
+Rotation: <Euler (x=-0.0033, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 1
+Location: <Vector (0.0000, -0.0023, 0.1500)>
+Rotation: <Euler (x=-0.0162, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 2
+Location: <Vector (0.0000, -0.0055, 0.1500)>
+Rotation: <Euler (x=-0.0290, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 3
+Location: <Vector (0.0000, -0.0086, 0.1500)>
+Rotation: <Euler (x=-0.0418, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 4
+Location: <Vector (0.0000, -0.0116, 0.1500)>
+Rotation: <Euler (x=-0.0544, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 5
+Location: <Vector (0.0000, -0.0146, 0.1500)>
+Rotation: <Euler (x=-0.0670, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 6
+Location: <Vector (0.0000, -0.0175, 0.1500)>
+Rotation: <Euler (x=-0.0794, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 7
+Location: <Vector (0.0000, -0.0202, 0.1500)>
+Rotation: <Euler (x=-0.0917, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 8
+Location: <Vector (0.0000, -0.0228, 0.1500)>
+Rotation: <Euler (x=-0.1037, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 9
+Location: <Vector (0.0000, -0.0253, 0.1500)>
+Rotation: <Euler (x=-0.1155, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 10
+Location: <Vector (0.0000, -0.0277, 0.1500)>
+Rotation: <Euler (x=-0.1271, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 11
+Location: <Vector (0.0000, -0.0298, 0.1500)>
+Rotation: <Euler (x=-0.1384, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 12
+Location: <Vector (0.0000, -0.0318, 0.1500)>
+Rotation: <Euler (x=-0.1494, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 13
+Location: <Vector (0.0000, -0.0337, 0.1500)>
+Rotation: <Euler (x=-0.1600, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 14
+Location: <Vector (0.0000, -0.0354, 0.1500)>
+Rotation: <Euler (x=-0.1703, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 15
+Location: <Vector (0.0000, -0.0370, 0.1500)>
+Rotation: <Euler (x=-0.1801, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 16
+Location: <Vector (0.0000, -0.0384, 0.1500)>
+Rotation: <Euler (x=-0.1896, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 17
+Location: <Vector (0.0000, -0.0397, 0.1500)>
+Rotation: <Euler (x=-0.1985, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 18
+Location: <Vector (0.0000, -0.0409, 0.1500)>
+Rotation: <Euler (x=-0.2070, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 19
+Location: <Vector (0.0000, -0.0419, 0.1500)>
+Rotation: <Euler (x=-0.2150, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 20
+Location: <Vector (0.0000, -0.0429, 0.1500)>
+Rotation: <Euler (x=-0.2225, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 21
+Location: <Vector (0.0000, -0.0437, 0.1500)>
+Rotation: <Euler (x=-0.2293, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 22
+Location: <Vector (0.0000, -0.0443, 0.1500)>
+Rotation: <Euler (x=-0.2356, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 23
+Location: <Vector (0.0000, -0.0449, 0.1500)>
+Rotation: <Euler (x=-0.2413, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 24
+Location: <Vector (0.0000, -0.0454, 0.1500)>
+Rotation: <Euler (x=-0.2462, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 25
+Location: <Vector (0.0000, -0.0458, 0.1500)>
+Rotation: <Euler (x=-0.2505, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 26
+Location: <Vector (0.0000, -0.0461, 0.1500)>
+Rotation: <Euler (x=-0.2541, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 27
+Location: <Vector (0.0000, -0.0463, 0.1500)>
+Rotation: <Euler (x=-0.2570, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 28
+Location: <Vector (0.0000, -0.0464, 0.1500)>
+Rotation: <Euler (x=-0.2590, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 29
+Location: <Vector (0.0000, -0.0464, 0.1500)>
+Rotation: <Euler (x=-0.2603, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 30
+Location: <Vector (0.0000, -0.0464, 0.1500)>
+Rotation: <Euler (x=-0.2607, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 31
+Location: <Vector (0.0000, -0.0463, 0.1500)>
+Rotation: <Euler (x=-0.2603, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 32
+Location: <Vector (0.0000, -0.0461, 0.1500)>
+Rotation: <Euler (x=-0.2591, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 33
+Location: <Vector (0.0000, -0.0459, 0.1500)>
+Rotation: <Euler (x=-0.2571, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 34
+Location: <Vector (0.0000, -0.0456, 0.1500)>
+Rotation: <Euler (x=-0.2543, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 35
+Location: <Vector (0.0000, -0.0452, 0.1500)>
+Rotation: <Euler (x=-0.2509, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 36
+Location: <Vector (0.0000, -0.0447, 0.1500)>
+Rotation: <Euler (x=-0.2467, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 37
+Location: <Vector (0.0000, -0.0441, 0.1500)>
+Rotation: <Euler (x=-0.2419, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 38
+Location: <Vector (0.0000, -0.0434, 0.1500)>
+Rotation: <Euler (x=-0.2364, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 39
+Location: <Vector (0.0000, -0.0427, 0.1500)>
+Rotation: <Euler (x=-0.2303, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 40
+Location: <Vector (0.0000, -0.0418, 0.1500)>
+Rotation: <Euler (x=-0.2236, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 41
+Location: <Vector (0.0000, -0.0408, 0.1500)>
+Rotation: <Euler (x=-0.2164, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 42
+Location: <Vector (0.0000, -0.0397, 0.1500)>
+Rotation: <Euler (x=-0.2086, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 43
+Location: <Vector (0.0000, -0.0385, 0.1500)>
+Rotation: <Euler (x=-0.2003, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 44
+Location: <Vector (0.0000, -0.0372, 0.1500)>
+Rotation: <Euler (x=-0.1915, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 45
+Location: <Vector (0.0000, -0.0358, 0.1500)>
+Rotation: <Euler (x=-0.1823, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 46
+Location: <Vector (0.0000, -0.0342, 0.1500)>
+Rotation: <Euler (x=-0.1727, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 47
+Location: <Vector (0.0000, -0.0325, 0.1500)>
+Rotation: <Euler (x=-0.1626, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 48
+Location: <Vector (0.0000, -0.0307, 0.1500)>
+Rotation: <Euler (x=-0.1522, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 49
+Location: <Vector (0.0000, -0.0287, 0.1500)>
+Rotation: <Euler (x=-0.1415, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 50
+Location: <Vector (0.0000, -0.0266, 0.1500)>
+Rotation: <Euler (x=-0.1304, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 51
+Location: <Vector (0.0000, -0.0243, 0.1500)>
+Rotation: <Euler (x=-0.1190, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 52
+Location: <Vector (0.0000, -0.0220, 0.1500)>
+Rotation: <Euler (x=-0.1074, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 53
+Location: <Vector (0.0000, -0.0194, 0.1500)>
+Rotation: <Euler (x=-0.0956, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 54
+Location: <Vector (0.0000, -0.0168, 0.1500)>
+Rotation: <Euler (x=-0.0835, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 55
+Location: <Vector (0.0000, -0.0140, 0.1500)>
+Rotation: <Euler (x=-0.0713, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 56
+Location: <Vector (0.0000, -0.0111, 0.1500)>
+Rotation: <Euler (x=-0.0589, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 57
+Location: <Vector (0.0000, -0.0081, 0.1500)>
+Rotation: <Euler (x=-0.0465, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 58
+Location: <Vector (0.0000, -0.0051, 0.1500)>
+Rotation: <Euler (x=-0.0339, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 59
+Location: <Vector (0.0000, -0.0020, 0.1500)>
+Rotation: <Euler (x=-0.0212, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 60
+Location: <Vector (0.0000, 0.0011, 0.1500)>
+Rotation: <Euler (x=-0.0085, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 61
+Location: <Vector (0.0000, 0.0043, 0.1500)>
+Rotation: <Euler (x=0.0042, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 62
+Location: <Vector (0.0000, 0.0074, 0.1500)>
+Rotation: <Euler (x=0.0168, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 63
+Location: <Vector (0.0000, 0.0105, 0.1500)>
+Rotation: <Euler (x=0.0295, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 64
+Location: <Vector (0.0000, 0.0135, 0.1500)>
+Rotation: <Euler (x=0.0420, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 65
+Location: <Vector (0.0000, 0.0164, 0.1500)>
+Rotation: <Euler (x=0.0545, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 66
+Location: <Vector (0.0000, 0.0193, 0.1500)>
+Rotation: <Euler (x=0.0668, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 67
+Location: <Vector (0.0000, 0.0220, 0.1500)>
+Rotation: <Euler (x=0.0790, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 68
+Location: <Vector (0.0000, 0.0245, 0.1500)>
+Rotation: <Euler (x=0.0910, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 69
+Location: <Vector (0.0000, 0.0270, 0.1500)>
+Rotation: <Euler (x=0.1027, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 70
+Location: <Vector (0.0000, 0.0293, 0.1500)>
+Rotation: <Euler (x=0.1143, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 71
+Location: <Vector (0.0000, 0.0314, 0.1500)>
+Rotation: <Euler (x=0.1255, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 72
+Location: <Vector (0.0000, 0.0334, 0.1500)>
+Rotation: <Euler (x=0.1365, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 73
+Location: <Vector (0.0000, 0.0352, 0.1500)>
+Rotation: <Euler (x=0.1472, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 74
+Location: <Vector (0.0000, 0.0369, 0.1500)>
+Rotation: <Euler (x=0.1575, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 75
+Location: <Vector (0.0000, 0.0385, 0.1500)>
+Rotation: <Euler (x=0.1675, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 76
+Location: <Vector (0.0000, 0.0399, 0.1500)>
+Rotation: <Euler (x=0.1770, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 77
+Location: <Vector (0.0000, 0.0412, 0.1500)>
+Rotation: <Euler (x=0.1861, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 78
+Location: <Vector (0.0000, 0.0423, 0.1500)>
+Rotation: <Euler (x=0.1948, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 79
+Location: <Vector (0.0000, 0.0433, 0.1500)>
+Rotation: <Euler (x=0.2030, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 80
+Location: <Vector (0.0000, 0.0442, 0.1500)>
+Rotation: <Euler (x=0.2106, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 81
+Location: <Vector (0.0000, 0.0450, 0.1500)>
+Rotation: <Euler (x=0.2178, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 82
+Location: <Vector (0.0000, 0.0457, 0.1500)>
+Rotation: <Euler (x=0.2244, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 83
+Location: <Vector (0.0000, 0.0463, 0.1500)>
+Rotation: <Euler (x=0.2304, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 84
+Location: <Vector (0.0000, 0.0468, 0.1500)>
+Rotation: <Euler (x=0.2358, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 85
+Location: <Vector (0.0000, 0.0471, 0.1500)>
+Rotation: <Euler (x=0.2405, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 86
+Location: <Vector (0.0000, 0.0474, 0.1500)>
+Rotation: <Euler (x=0.2446, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 87
+Location: <Vector (0.0000, 0.0476, 0.1500)>
+Rotation: <Euler (x=0.2480, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 88
+Location: <Vector (0.0000, 0.0477, 0.1500)>
+Rotation: <Euler (x=0.2507, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 89
+Location: <Vector (0.0000, 0.0478, 0.1500)>
+Rotation: <Euler (x=0.2527, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 90
+Location: <Vector (0.0000, 0.0477, 0.1500)>
+Rotation: <Euler (x=0.2539, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 91
+Location: <Vector (0.0000, 0.0476, 0.1500)>
+Rotation: <Euler (x=0.2543, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 92
+Location: <Vector (0.0000, 0.0475, 0.1500)>
+Rotation: <Euler (x=0.2538, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 93
+Location: <Vector (0.0000, 0.0472, 0.1500)>
+Rotation: <Euler (x=0.2526, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 94
+Location: <Vector (0.0000, 0.0469, 0.1500)>
+Rotation: <Euler (x=0.2505, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 95
+Location: <Vector (0.0000, 0.0465, 0.1500)>
+Rotation: <Euler (x=0.2476, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 96
+Location: <Vector (0.0000, 0.0460, 0.1500)>
+Rotation: <Euler (x=0.2439, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 97
+Location: <Vector (0.0000, 0.0454, 0.1500)>
+Rotation: <Euler (x=0.2395, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 98
+Location: <Vector (0.0000, 0.0447, 0.1500)>
+Rotation: <Euler (x=0.2345, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 99
+Location: <Vector (0.0000, 0.0439, 0.1500)>
+Rotation: <Euler (x=0.2287, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 100
+Location: <Vector (0.0000, 0.0430, 0.1500)>
+Rotation: <Euler (x=0.2224, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 101
+Location: <Vector (0.0000, 0.0420, 0.1500)>
+Rotation: <Euler (x=0.2154, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 102
+Location: <Vector (0.0000, 0.0409, 0.1500)>
+Rotation: <Euler (x=0.2078, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 103
+Location: <Vector (0.0000, 0.0397, 0.1500)>
+Rotation: <Euler (x=0.1998, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 104
+Location: <Vector (0.0000, 0.0383, 0.1500)>
+Rotation: <Euler (x=0.1911, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 105
+Location: <Vector (0.0000, 0.0369, 0.1500)>
+Rotation: <Euler (x=0.1821, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 106
+Location: <Vector (0.0000, 0.0353, 0.1500)>
+Rotation: <Euler (x=0.1725, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 107
+Location: <Vector (0.0000, 0.0335, 0.1500)>
+Rotation: <Euler (x=0.1626, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 108
+Location: <Vector (0.0000, 0.0316, 0.1500)>
+Rotation: <Euler (x=0.1522, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 109
+Location: <Vector (0.0000, 0.0296, 0.1500)>
+Rotation: <Euler (x=0.1415, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 110
+Location: <Vector (0.0000, 0.0274, 0.1500)>
+Rotation: <Euler (x=0.1304, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 111
+Location: <Vector (0.0000, 0.0251, 0.1500)>
+Rotation: <Euler (x=0.1190, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 112
+Location: <Vector (0.0000, 0.0227, 0.1500)>
+Rotation: <Euler (x=0.1074, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 113
+Location: <Vector (0.0000, 0.0201, 0.1500)>
+Rotation: <Euler (x=0.0955, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 114
+Location: <Vector (0.0000, 0.0174, 0.1500)>
+Rotation: <Euler (x=0.0834, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 115
+Location: <Vector (0.0000, 0.0146, 0.1500)>
+Rotation: <Euler (x=0.0711, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 116
+Location: <Vector (0.0000, 0.0117, 0.1500)>
+Rotation: <Euler (x=0.0586, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 117
+Location: <Vector (0.0000, 0.0087, 0.1500)>
+Rotation: <Euler (x=0.0460, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 118
+Location: <Vector (0.0000, 0.0056, 0.1500)>
+Rotation: <Euler (x=0.0333, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 119
+Location: <Vector (0.0000, 0.0025, 0.1500)>
+Rotation: <Euler (x=0.0205, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 120
+Location: <Vector (0.0000, -0.0007, 0.1500)>
+Rotation: <Euler (x=0.0077, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 121
+Location: <Vector (0.0000, -0.0038, 0.1500)>
+Rotation: <Euler (x=-0.0052, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 122
+Location: <Vector (0.0000, -0.0069, 0.1500)>
+Rotation: <Euler (x=-0.0180, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 123
+Location: <Vector (0.0000, -0.0100, 0.1500)>
+Rotation: <Euler (x=-0.0308, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 124
+Location: <Vector (0.0000, -0.0130, 0.1500)>
+Rotation: <Euler (x=-0.0436, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 125
+Location: <Vector (0.0000, -0.0158, 0.1500)>
+Rotation: <Euler (x=-0.0562, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 126
+Location: <Vector (0.0000, -0.0186, 0.1500)>
+Rotation: <Euler (x=-0.0687, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 127
+Location: <Vector (0.0000, -0.0213, 0.1500)>
+Rotation: <Euler (x=-0.0811, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 128
+Location: <Vector (0.0000, -0.0238, 0.1500)>
+Rotation: <Euler (x=-0.0933, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 129
+Location: <Vector (0.0000, -0.0262, 0.1500)>
+Rotation: <Euler (x=-0.1053, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 130
+Location: <Vector (0.0000, -0.0284, 0.1500)>
+Rotation: <Euler (x=-0.1171, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 131
+Location: <Vector (0.0000, -0.0305, 0.1500)>
+Rotation: <Euler (x=-0.1286, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 132
+Location: <Vector (0.0000, -0.0325, 0.1500)>
+Rotation: <Euler (x=-0.1398, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 133
+Location: <Vector (0.0000, -0.0343, 0.1500)>
+Rotation: <Euler (x=-0.1507, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 134
+Location: <Vector (0.0000, -0.0359, 0.1500)>
+Rotation: <Euler (x=-0.1612, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 135
+Location: <Vector (0.0000, -0.0374, 0.1500)>
+Rotation: <Euler (x=-0.1714, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 136
+Location: <Vector (0.0000, -0.0388, 0.1500)>
+Rotation: <Euler (x=-0.1812, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 137
+Location: <Vector (0.0000, -0.0400, 0.1500)>
+Rotation: <Euler (x=-0.1905, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 138
+Location: <Vector (0.0000, -0.0412, 0.1500)>
+Rotation: <Euler (x=-0.1994, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 139
+Location: <Vector (0.0000, -0.0422, 0.1500)>
+Rotation: <Euler (x=-0.2078, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 140
+Location: <Vector (0.0000, -0.0430, 0.1500)>
+Rotation: <Euler (x=-0.2157, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 141
+Location: <Vector (0.0000, -0.0438, 0.1500)>
+Rotation: <Euler (x=-0.2230, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 142
+Location: <Vector (0.0000, -0.0445, 0.1500)>
+Rotation: <Euler (x=-0.2298, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 143
+Location: <Vector (0.0000, -0.0450, 0.1500)>
+Rotation: <Euler (x=-0.2360, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 144
+Location: <Vector (0.0000, -0.0455, 0.1500)>
+Rotation: <Euler (x=-0.2416, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 145
+Location: <Vector (0.0000, -0.0459, 0.1500)>
+Rotation: <Euler (x=-0.2465, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 146
+Location: <Vector (0.0000, -0.0461, 0.1500)>
+Rotation: <Euler (x=-0.2507, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 147
+Location: <Vector (0.0000, -0.0463, 0.1500)>
+Rotation: <Euler (x=-0.2542, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 148
+Location: <Vector (0.0000, -0.0464, 0.1500)>
+Rotation: <Euler (x=-0.2570, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 149
+Location: <Vector (0.0000, -0.0465, 0.1500)>
+Rotation: <Euler (x=-0.2591, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 150
+Location: <Vector (0.0000, -0.0464, 0.1500)>
+Rotation: <Euler (x=-0.2603, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 151
+Location: <Vector (0.0000, -0.0463, 0.1500)>
+Rotation: <Euler (x=-0.2607, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 152
+Location: <Vector (0.0000, -0.0462, 0.1500)>
+Rotation: <Euler (x=-0.2603, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 153
+Location: <Vector (0.0000, -0.0459, 0.1500)>
+Rotation: <Euler (x=-0.2591, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 154
+Location: <Vector (0.0000, -0.0456, 0.1500)>
+Rotation: <Euler (x=-0.2570, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 155
+Location: <Vector (0.0000, -0.0451, 0.1500)>
+Rotation: <Euler (x=-0.2542, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 156
+Location: <Vector (0.0000, -0.0446, 0.1500)>
+Rotation: <Euler (x=-0.2507, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 157
+Location: <Vector (0.0000, -0.0440, 0.1500)>
+Rotation: <Euler (x=-0.2465, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 158
+Location: <Vector (0.0000, -0.0433, 0.1500)>
+Rotation: <Euler (x=-0.2416, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 159
+Location: <Vector (0.0000, -0.0425, 0.1500)>
+Rotation: <Euler (x=-0.2360, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 160
+Location: <Vector (0.0000, -0.0416, 0.1500)>
+Rotation: <Euler (x=-0.2298, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 161
+Location: <Vector (0.0000, -0.0406, 0.1500)>
+Rotation: <Euler (x=-0.2230, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 162
+Location: <Vector (0.0000, -0.0394, 0.1500)>
+Rotation: <Euler (x=-0.2157, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 163
+Location: <Vector (0.0000, -0.0382, 0.1500)>
+Rotation: <Euler (x=-0.2078, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 164
+Location: <Vector (0.0000, -0.0368, 0.1500)>
+Rotation: <Euler (x=-0.1994, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 165
+Location: <Vector (0.0000, -0.0353, 0.1500)>
+Rotation: <Euler (x=-0.1905, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 166
+Location: <Vector (0.0000, -0.0336, 0.1500)>
+Rotation: <Euler (x=-0.1812, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 167
+Location: <Vector (0.0000, -0.0319, 0.1500)>
+Rotation: <Euler (x=-0.1714, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 168
+Location: <Vector (0.0000, -0.0299, 0.1500)>
+Rotation: <Euler (x=-0.1612, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 169
+Location: <Vector (0.0000, -0.0279, 0.1500)>
+Rotation: <Euler (x=-0.1507, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 170
+Location: <Vector (0.0000, -0.0256, 0.1500)>
+Rotation: <Euler (x=-0.1398, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 171
+Location: <Vector (0.0000, -0.0233, 0.1500)>
+Rotation: <Euler (x=-0.1286, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 172
+Location: <Vector (0.0000, -0.0208, 0.1500)>
+Rotation: <Euler (x=-0.1171, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 173
+Location: <Vector (0.0000, -0.0182, 0.1500)>
+Rotation: <Euler (x=-0.1053, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 174
+Location: <Vector (0.0000, -0.0154, 0.1500)>
+Rotation: <Euler (x=-0.0933, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 175
+Location: <Vector (0.0000, -0.0126, 0.1500)>
+Rotation: <Euler (x=-0.0811, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 176
+Location: <Vector (0.0000, -0.0096, 0.1500)>
+Rotation: <Euler (x=-0.0687, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 177
+Location: <Vector (0.0000, -0.0066, 0.1500)>
+Rotation: <Euler (x=-0.0562, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 178
+Location: <Vector (0.0000, -0.0035, 0.1500)>
+Rotation: <Euler (x=-0.0436, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 179
+Location: <Vector (0.0000, -0.0004, 0.1500)>
+Rotation: <Euler (x=-0.0308, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 180
+Location: <Vector (0.0000, 0.0028, 0.1500)>
+Rotation: <Euler (x=-0.0180, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 181
+Location: <Vector (0.0000, 0.0059, 0.1500)>
+Rotation: <Euler (x=-0.0052, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 182
+Location: <Vector (0.0000, 0.0090, 0.1500)>
+Rotation: <Euler (x=0.0077, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 183
+Location: <Vector (0.0000, 0.0120, 0.1500)>
+Rotation: <Euler (x=0.0205, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 184
+Location: <Vector (0.0000, 0.0150, 0.1500)>
+Rotation: <Euler (x=0.0333, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 185
+Location: <Vector (0.0000, 0.0179, 0.1500)>
+Rotation: <Euler (x=0.0460, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 186
+Location: <Vector (0.0000, 0.0206, 0.1500)>
+Rotation: <Euler (x=0.0586, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 187
+Location: <Vector (0.0000, 0.0232, 0.1500)>
+Rotation: <Euler (x=0.0711, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 188
+Location: <Vector (0.0000, 0.0257, 0.1500)>
+Rotation: <Euler (x=0.0834, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 189
+Location: <Vector (0.0000, 0.0280, 0.1500)>
+Rotation: <Euler (x=0.0955, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 190
+Location: <Vector (0.0000, 0.0302, 0.1500)>
+Rotation: <Euler (x=0.1074, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 191
+Location: <Vector (0.0000, 0.0323, 0.1500)>
+Rotation: <Euler (x=0.1190, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 192
+Location: <Vector (0.0000, 0.0342, 0.1500)>
+Rotation: <Euler (x=0.1304, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 193
+Location: <Vector (0.0000, 0.0359, 0.1500)>
+Rotation: <Euler (x=0.1415, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 194
+Location: <Vector (0.0000, 0.0376, 0.1500)>
+Rotation: <Euler (x=0.1522, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 195
+Location: <Vector (0.0000, 0.0390, 0.1500)>
+Rotation: <Euler (x=0.1626, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 196
+Location: <Vector (0.0000, 0.0404, 0.1500)>
+Rotation: <Euler (x=0.1725, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 197
+Location: <Vector (0.0000, 0.0416, 0.1500)>
+Rotation: <Euler (x=0.1821, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 198
+Location: <Vector (0.0000, 0.0427, 0.1500)>
+Rotation: <Euler (x=0.1911, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 199
+Location: <Vector (0.0000, 0.0437, 0.1500)>
+Rotation: <Euler (x=0.1998, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 200
+Location: <Vector (0.0000, 0.0445, 0.1500)>
+Rotation: <Euler (x=0.2078, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 201
+Location: <Vector (0.0000, 0.0453, 0.1500)>
+Rotation: <Euler (x=0.2154, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 202
+Location: <Vector (0.0000, 0.0459, 0.1500)>
+Rotation: <Euler (x=0.2224, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 203
+Location: <Vector (0.0000, 0.0465, 0.1500)>
+Rotation: <Euler (x=0.2287, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 204
+Location: <Vector (0.0000, 0.0469, 0.1500)>
+Rotation: <Euler (x=0.2345, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 205
+Location: <Vector (0.0000, 0.0473, 0.1500)>
+Rotation: <Euler (x=0.2395, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 206
+Location: <Vector (0.0000, 0.0475, 0.1500)>
+Rotation: <Euler (x=0.2439, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 207
+Location: <Vector (0.0000, 0.0477, 0.1500)>
+Rotation: <Euler (x=0.2476, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 208
+Location: <Vector (0.0000, 0.0478, 0.1500)>
+Rotation: <Euler (x=0.2505, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 209
+Location: <Vector (0.0000, 0.0479, 0.1500)>
+Rotation: <Euler (x=0.2526, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 210
+Location: <Vector (0.0000, 0.0478, 0.1500)>
+Rotation: <Euler (x=0.2538, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 211
+Location: <Vector (0.0000, 0.0477, 0.1500)>
+Rotation: <Euler (x=0.2543, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 212
+Location: <Vector (0.0000, 0.0476, 0.1500)>
+Rotation: <Euler (x=0.2539, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 213
+Location: <Vector (0.0000, 0.0473, 0.1500)>
+Rotation: <Euler (x=0.2527, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 214
+Location: <Vector (0.0000, 0.0470, 0.1500)>
+Rotation: <Euler (x=0.2507, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 215
+Location: <Vector (0.0000, 0.0466, 0.1500)>
+Rotation: <Euler (x=0.2480, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 216
+Location: <Vector (0.0000, 0.0461, 0.1500)>
+Rotation: <Euler (x=0.2446, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 217
+Location: <Vector (0.0000, 0.0455, 0.1500)>
+Rotation: <Euler (x=0.2405, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 218
+Location: <Vector (0.0000, 0.0448, 0.1500)>
+Rotation: <Euler (x=0.2358, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 219
+Location: <Vector (0.0000, 0.0440, 0.1500)>
+Rotation: <Euler (x=0.2304, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 220
+Location: <Vector (0.0000, 0.0431, 0.1500)>
+Rotation: <Euler (x=0.2244, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 221
+Location: <Vector (0.0000, 0.0421, 0.1500)>
+Rotation: <Euler (x=0.2178, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 222
+Location: <Vector (0.0000, 0.0410, 0.1500)>
+Rotation: <Euler (x=0.2107, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 223
+Location: <Vector (0.0000, 0.0397, 0.1500)>
+Rotation: <Euler (x=0.2030, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 224
+Location: <Vector (0.0000, 0.0384, 0.1500)>
+Rotation: <Euler (x=0.1948, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 225
+Location: <Vector (0.0000, 0.0369, 0.1500)>
+Rotation: <Euler (x=0.1862, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 226
+Location: <Vector (0.0000, 0.0353, 0.1500)>
+Rotation: <Euler (x=0.1771, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 227
+Location: <Vector (0.0000, 0.0335, 0.1500)>
+Rotation: <Euler (x=0.1675, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 228
+Location: <Vector (0.0000, 0.0316, 0.1500)>
+Rotation: <Euler (x=0.1576, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 229
+Location: <Vector (0.0000, 0.0296, 0.1500)>
+Rotation: <Euler (x=0.1473, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 230
+Location: <Vector (0.0000, 0.0274, 0.1500)>
+Rotation: <Euler (x=0.1366, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 231
+Location: <Vector (0.0000, 0.0251, 0.1500)>
+Rotation: <Euler (x=0.1256, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 232
+Location: <Vector (0.0000, 0.0226, 0.1500)>
+Rotation: <Euler (x=0.1144, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 233
+Location: <Vector (0.0000, 0.0201, 0.1500)>
+Rotation: <Euler (x=0.1028, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 234
+Location: <Vector (0.0000, 0.0173, 0.1500)>
+Rotation: <Euler (x=0.0911, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 235
+Location: <Vector (0.0000, 0.0145, 0.1500)>
+Rotation: <Euler (x=0.0791, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 236
+Location: <Vector (0.0000, 0.0116, 0.1500)>
+Rotation: <Euler (x=0.0669, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 237
+Location: <Vector (0.0000, 0.0086, 0.1500)>
+Rotation: <Euler (x=0.0546, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 238
+Location: <Vector (0.0000, 0.0055, 0.1500)>
+Rotation: <Euler (x=0.0422, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 239
+Location: <Vector (0.0000, 0.0024, 0.1500)>
+Rotation: <Euler (x=0.0296, y=0.0000, z=0.0000), order='XYZ'>
+
+Frame 240
+Location: <Vector (0.0000, -0.0008, 0.1500)>
+Rotation: <Euler (x=0.0170, y=0.0000, z=0.0000), order='XYZ'>
+

@@ -1,0 +1,71 @@
+from launch import LaunchDescription
+from launch_ros.actions import Node
+from launch.actions import ExecuteProcess
+
+import math
+
+
+draftAngle = math.radians(-20) #degrees to radians
+servoHeight = 44 * .001       # mm to m
+
+end_effector_arm_connections = [[-0.0302, 0.03191, 0.0],
+                                [-0.01253, 0.04211, 0.0],
+                                [0.04273, 0.0102, 0.0],
+                                [0.04273, -0.0102, 0.0],
+                                [-0.01253, -0.04211, 0.0],
+                                [-0.0302, -0.03191, 0.0]]
+
+def generate_launch_description():
+    return LaunchDescription([
+
+        Node(
+            package='robot',
+            executable='end_effector_tf.py',    
+            name='end_effector_tf'
+        ),      
+
+        Node(
+            package='robot',
+            executable='fixed_frame_broadcaster.py',
+            name='fixed_frame_broadcaster1',
+            parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm1_end_connection'}, {"x_translation": end_effector_arm_connections[0][0]}, {"y_translation": end_effector_arm_connections[0][1]}]
+        ),
+
+        Node(package='robot',
+            executable='fixed_frame_broadcaster.py',
+            name='fixed_frame_broadcaster2',
+            parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm2_end_connection'}, {"x_translation": end_effector_arm_connections[1][0]}, {"y_translation": end_effector_arm_connections[1][1]}]
+        ),
+
+        Node(package='robot',
+            executable='fixed_frame_broadcaster.py',
+            name='fixed_frame_broadcaster3',
+            parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm3_end_connection'}, {"x_translation": end_effector_arm_connections[2][0]}, {"y_translation": end_effector_arm_connections[2][1]}]
+        ),
+        
+        Node(package='robot',
+            executable='fixed_frame_broadcaster.py',
+            name='fixed_frame_broadcaster4',
+            parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm4_end_connection'}, {"x_translation": end_effector_arm_connections[3][0]}, {"y_translation": end_effector_arm_connections[3][1]}]
+        ),
+
+        Node(package='robot',
+            executable='fixed_frame_broadcaster.py',
+            name='fixed_frame_broadcaster5',
+            parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm5_end_connection'}, {"x_translation": end_effector_arm_connections[4][0]}, {"y_translation": end_effector_arm_connections[4][1]}]
+        ),
+        
+        Node(package='robot',
+            executable='fixed_frame_broadcaster.py',
+            name='fixed_frame_broadcaster6',
+            parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm6_end_connection'}, {"x_translation": end_effector_arm_connections[5][0]}, {"y_translation": end_effector_arm_connections[5][1]}]
+        ),        
+
+
+
+        Node(
+            package='rviz2',
+            executable='rviz2',
+        )
+    
+    ])
