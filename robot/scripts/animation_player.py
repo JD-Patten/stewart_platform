@@ -5,8 +5,12 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose, Point, Quaternion
 import math
 import numpy as np
+import os
+
+
 
 FRAMERATE = 60
+filename = "animation1.txt"
 
 def quaternion_from_euler(ai, aj, ak):
     ai /= 2.0
@@ -36,10 +40,7 @@ class AnimationPlayer(Node):
     def __init__(self):
         super().__init__("animation_player_node")    
 
-
-
-        self.read_animation_from_txt()
-                            
+        self.read_animation_from_txt()  
         self.frame = 0
 
         self.pub = self.create_publisher(Pose, "end_effector_pose", 1)     
@@ -47,7 +48,16 @@ class AnimationPlayer(Node):
 
     def read_animation_from_txt(self):
 
-        input_file = open(r"/home/jd/Workspaces/stewart_ws/src/robot/animation/animation1.txt", "r")
+        # Get the current script's directory
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+
+
+
+        # Construct the path to the input file relative to the script's directory
+        input_file_path = os.path.join(script_dir, "../animation", filename)
+
+        # Open the input file
+        input_file = open(input_file_path, "r")
 
         # Initialize the list of lists
         self.animation_data = []
