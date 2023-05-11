@@ -29,7 +29,7 @@ l2 = 135 *0.001 # mm to m
 
 class FrameListener(Node):
     def __init__(self):
-        super().__init__('frame_listener')
+        super().__init__('inverse_kinematics_node')
 
         # Declare and acquire `target_frame` parameter
         self.pub = self.create_publisher(JointState, "joint_states", 1)     #creates a publisher with JointState msg type, "hello_world" topic name, and qos profile size of 10 (queue size of 10)

@@ -54,7 +54,7 @@ class AnimationPlayer(Node):
 
 
         # Construct the path to the input file relative to the script's directory
-        input_file_path = os.path.join(script_dir, "../animation", filename)
+        input_file_path = os.path.join(script_dir, "../../share/robot/animation", filename)
 
         # Open the input file
         input_file = open(input_file_path, "r")
