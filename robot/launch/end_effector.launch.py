@@ -27,37 +27,37 @@ def generate_launch_description():
         Node(
             package='robot',
             executable='fixed_frame_broadcaster.py',
-            name='fixed_frame_broadcaster1',
+            name='arm_1_tf_frame_publisher',
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm1_end_connection'}, {"x_translation": end_effector_arm_connections[0][0]}, {"y_translation": end_effector_arm_connections[0][1]}]
         ),
 
         Node(package='robot',
             executable='fixed_frame_broadcaster.py',
-            name='fixed_frame_broadcaster2',
+            name='arm_2_tf_frame_publisher',
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm2_end_connection'}, {"x_translation": end_effector_arm_connections[1][0]}, {"y_translation": end_effector_arm_connections[1][1]}]
         ),
 
         Node(package='robot',
             executable='fixed_frame_broadcaster.py',
-            name='fixed_frame_broadcaster3',
+            name='arm_3_tf_frame_publisher',
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm3_end_connection'}, {"x_translation": end_effector_arm_connections[2][0]}, {"y_translation": end_effector_arm_connections[2][1]}]
         ),
         
         Node(package='robot',
             executable='fixed_frame_broadcaster.py',
-            name='fixed_frame_broadcaster4',
+            name='arm_4_tf_frame_publisher',
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm4_end_connection'}, {"x_translation": end_effector_arm_connections[3][0]}, {"y_translation": end_effector_arm_connections[3][1]}]
         ),
 
         Node(package='robot',
             executable='fixed_frame_broadcaster.py',
-            name='fixed_frame_broadcaster5',
+            name='arm_5_tf_frame_publisher',
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm5_end_connection'}, {"x_translation": end_effector_arm_connections[4][0]}, {"y_translation": end_effector_arm_connections[4][1]}]
         ),
         
         Node(package='robot',
             executable='fixed_frame_broadcaster.py',
-            name='fixed_frame_broadcaster6',
+            name='arm_6_tf_frame_publisher',
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm6_end_connection'}, {"x_translation": end_effector_arm_connections[5][0]}, {"y_translation": end_effector_arm_connections[5][1]}]
         ),        
 
