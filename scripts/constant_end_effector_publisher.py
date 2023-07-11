@@ -15,8 +15,6 @@ class ConstantPosePublisher(Node):
 
 
     def publish_hello_world(self): 
-
-        
         zValue = .132
         pose = Pose()     
         pose.position = Point(x=0.0, y=0.0, z= zValue)

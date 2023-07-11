@@ -51,26 +51,33 @@ class FrameListener(Node):
                      'servo4_link', 'servo5_link', 'servo6_link']
         angles = [0, 0, 0, 0, 0, 0]
 
-        for i in range(6):
-            try:
-                t = self.tf_buffer.lookup_transform(to_frames[i], from_frames[i], rclpy.time.Time())
-            except TransformException as ex:
+        try:
 
-                self.get_logger().info(
-                    f'Could not transform {to_frames[i]} to {from_frames[i]}: {ex}')
-                print("Could not transform" +str(i+1))
-                return
+            for i in range(6):
+                try:
+                    t = self.tf_buffer.lookup_transform(to_frames[i], from_frames[i], rclpy.time.Time())
+                except TransformException as ex:
 
-            x = t.transform.translation.x
-            y = t.transform.translation.y
-            z = t.transform.translation.z 
+                    self.get_logger().info(
+                        f'Could not transform {to_frames[i]} to {from_frames[i]}: {ex}')
+                    print("Could not transform" +str(i+1))
+                    return
 
-            angle= self.solve_for_angle(x, y, z)
-
-            angles[i] = angle
+                x = t.transform.translation.x
+                y = t.transform.translation.y
+                z = t.transform.translation.z 
 
 
-        self.publish_joint_states(angles)
+                
+                angle= self.solve_for_angle(x, y, z)
+                angles[i] = angle
+                
+
+
+            self.publish_joint_states(angles)
+            
+        except:
+            print("*** error calculating angles ***")
 
     def solveInverseKinematicsEquation(self):
 
@@ -90,7 +97,7 @@ class FrameListener(Node):
         x2 = y
         y2 = z
         z2 = x
-
+        
         solution1 = 2.0*math.atan((100000.0*y2 - 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))
         solution2 = 2.0*math.atan((100000.0*y2 + 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))            
         
