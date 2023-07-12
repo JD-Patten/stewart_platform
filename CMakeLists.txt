@@ -21,6 +21,7 @@ scripts/servo_angle_calculator.py
 scripts/fixed_frame_broadcaster.py
 scripts/serial_communication.py
 scripts/animation_player.py
+scripts/gui.py
 DESTINATION lib/${PROJECT_NAME}
 )
 

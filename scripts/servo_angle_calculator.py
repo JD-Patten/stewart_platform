@@ -17,7 +17,7 @@ from sensor_msgs.msg import JointState
 
 
 l1 = 50 * 0.001 # mm to m
-l2 = 135 *0.001 # mm to m
+l2 = 235 *0.001 # mm to m
 
 # servo1_offset = math.radians(0.0)
 # servo2_offset = math.radians(-15.0)
@@ -38,6 +38,7 @@ class FrameListener(Node):
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
+        #self.solveInverseKinematicsEquation()
 
         # Call on_timer function every second
         self.timer = self.create_timer(0.03, self.on_timer)
@@ -75,7 +76,7 @@ class FrameListener(Node):
 
 
             self.publish_joint_states(angles)
-            
+
         except:
             print("*** error calculating angles ***")
 
@@ -83,14 +84,17 @@ class FrameListener(Node):
 
         print("solving...")
 
+        l1 = sym('l1')
+        l2 = sym('l2')
         x2 = sym('x2')
         y2 = sym('y2')
         z2 = sym('z2')
         theta = sym('theta')
 
         equation = Eq(l2**2, (x2 - (l1 * sympy.cos(theta)) ) **2 + (y2-(l1 * sympy.sin(theta)))**2 + z2**2)
-        self.solution = solve(equation, theta)
-        print("solved")
+        self.solution = solve(equation, theta, minimal=True)
+
+        return
 
     def solve_for_angle(self, x, y, z):
 
@@ -98,9 +102,12 @@ class FrameListener(Node):
         y2 = z
         z2 = x
         
-        solution1 = 2.0*math.atan((100000.0*y2 - 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))
-        solution2 = 2.0*math.atan((100000.0*y2 + 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))            
+        #solution1 = 2.0*math.atan((100000.0*y2 - 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))
+        #solution2 = 2.0*math.atan((100000.0*y2 + 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))            
         
+        solution1 = 2*math.atan((2*l1*y2 - math.sqrt(-l1**4 + 2*l1**2*l2**2 + 2*l1**2*x2**2 + 2*l1**2*y2**2 - 2*l1**2*z2**2 - l2**4 + 2*l2**2*x2**2 + 2*l2**2*y2**2 + 2*l2**2*z2**2 - x2**4 - 2*x2**2*y2**2 - 2*x2**2*z2**2 - y2**4 - 2*y2**2*z2**2 - z2**4))/(l1**2 + 2*l1*x2 - l2**2 + x2**2 + y2**2 + z2**2))
+        solution2 = 2*math.atan((2*l1*y2 + math.sqrt(-l1**4 + 2*l1**2*l2**2 + 2*l1**2*x2**2 + 2*l1**2*y2**2 - 2*l1**2*z2**2 - l2**4 + 2*l2**2*x2**2 + 2*l2**2*y2**2 + 2*l2**2*z2**2 - x2**4 - 2*x2**2*y2**2 - 2*x2**2*z2**2 - y2**4 - 2*y2**2*z2**2 - z2**4))/(l1**2 + 2*l1*x2 - l2**2 + x2**2 + y2**2 + z2**2))
+
         if abs(solution1) < abs(solution2):
             angle = solution1
         else:
