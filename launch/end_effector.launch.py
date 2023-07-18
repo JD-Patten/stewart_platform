@@ -8,12 +8,12 @@ import math
 draftAngle = math.radians(-20) #degrees to radians
 servoHeight = 44 * .001       # mm to m
 
-end_effector_arm_connections = [[-0.0302, 0.03191, 0.0],
-                                [-0.01253, 0.04211, 0.0],
-                                [0.04273, 0.0102, 0.0],
-                                [0.04273, -0.0102, 0.0],
-                                [-0.01253, -0.04211, 0.0],
-                                [-0.0302, -0.03191, 0.0]]
+end_effector_arm_connections = [[-0.03464, 0.02, 0.0],
+                                [0.0, 0.04, 0.0],
+                                [0.03464, 0.02, 0.0],
+                                [0.03464, -0.02, 0.0],
+                                [0.0, -0.04, 0.0],
+                                [-0.03464, -0.02, 0.0]]
 
 def generate_launch_description():
     return LaunchDescription([
