@@ -50,6 +50,7 @@ class SliderPublisher(Node):
         self.button.grid(row=1, column=3, padx = 10, pady = 10)
 
         self.reset_sliders()
+        
 
     def reset_sliders(self):
         self.xSlider.set(0)

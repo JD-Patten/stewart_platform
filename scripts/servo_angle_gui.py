@@ -17,6 +17,8 @@ class SliderPublisher(Node):
         
         self.pub = self.create_publisher(JointState, "joint_states", 1)     #creates a publisher with JointState msg type, "hello_world" topic name, and qos profile size of 10 (queue size of 10)
 
+        self.move_all = False
+        
         self.root = tk.Tk()
 
         self.label1 = tk.Label(self.root, text= "Arm 1" )
@@ -53,6 +55,10 @@ class SliderPublisher(Node):
         self.button = tk.Button(self.root, text= "RESET", command= self.reset_sliders)
         self.button.grid(row=1, column=7, padx = 10, pady = 10)
 
+        self.checkbox = tk.Checkbutton(self.root, text='move all',command=self.toggle_set_all)
+        self.checkbox.grid(row=2, column=7, padx = 1, pady=10)
+
+
         self.reset_sliders()
 
     def reset_sliders(self):
@@ -62,9 +68,19 @@ class SliderPublisher(Node):
         self.slider4.set(0)
         self.slider5.set(0)
         self.slider6.set(0)
-        
+    
+    def toggle_set_all(self):
+        self.move_all = not self.move_all
 
     def publish_joint_states(self, value):
+        if self.move_all:
+            self.slider1.set(value)
+            self.slider2.set(value)
+            self.slider3.set(value)
+            self.slider4.set(value)
+            self.slider5.set(value)
+            self.slider6.set(value)
+        
 
         angle1 = math.radians(self.slider1.get())
         angle2 = math.radians(self.slider2.get())
