@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+    <xacro:property name="arm_connection1_x" value="-0.0302"/>
+    <xacro:property name="arm_connection1_y" value="0.03191"/>
+    <xacro:property name="arm_connection2_x" value="-0.01253"/>
+    <xacro:property name="arm_connection2_y" value="0.04211"/>
+    <xacro:property name="arm_connection3_x" value="0.04273"/>
+    <xacro:property name="arm_connection3_y" value="0.0102"/>
+    <xacro:property name="arm_connection4_x" value="0.04273"/>
+    <xacro:property name="arm_connection4_y" value="-0.0102"/>
+    <xacro:property name="arm_connection5_x" value="-0.01253"/>
+    <xacro:property name="arm_connection5_y" value="-0.04211"/>
+    <xacro:property name="arm_connection6_x" value="-0.0302"/>
+    <xacro:property name="arm_connection6_y" value="-0.03191"/>
+
+    <joint name="end_effector_joint" type="floating">
+        <parent link="base_link"/>
+        <child link="end_effector_link"/>
+        <origin xyz="0 0 0.150" rpy="0 0 0"/>
+        <limit lower="-1.0 -1.0 -1.0 -2.0 -2.0 -2.0" upper="1.0 1.0 2.0 2 2.0 2.0" />
+    </joint>
+
+    <link name="end_effector_link">
+        <visual>
+            <geometry>
+                <cylinder length = "0.010" radius = "0.040"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="arm_connection1_joint" type="fixed">
+        <parent link="end_effector_link"/>
+        <child link="arm_connection1_link"/>
+        <origin xyz="${arm_connection1_x} ${arm_connection1_y} 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_connection1_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="arm_connection2_joint" type="fixed">
+        <parent link="end_effector_link"/>
+        <child link="arm_connection2_link"/>
+        <origin xyz="${arm_connection2_x} ${arm_connection2_y} 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_connection2_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="arm_connection3_joint" type="fixed">
+        <parent link="end_effector_link"/>
+        <child link="arm_connection3_link"/>
+        <origin xyz="${arm_connection3_x} ${arm_connection3_y} 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_connection3_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="arm_connection4_joint" type="fixed">
+        <parent link="end_effector_link"/>
+        <child link="arm_connection4_link"/>
+        <origin xyz="${arm_connection4_x} ${arm_connection4_y} 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_connection4_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="arm_connection5_joint" type="fixed">
+        <parent link="end_effector_link"/>
+        <child link="arm_connection5_link"/>
+        <origin xyz="${arm_connection5_x} ${arm_connection5_y} 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_connection5_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="arm_connection6_joint" type="fixed">
+        <parent link="end_effector_link"/>
+        <child link="arm_connection6_link"/>
+        <origin xyz="${arm_connection6_x} ${arm_connection6_y} 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_connection6_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+
+    
+</robot>
