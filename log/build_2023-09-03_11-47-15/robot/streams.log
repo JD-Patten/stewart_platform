@@ -1,0 +1,72 @@
+[0.233s] Invoking command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jd/Workspaces/stewart_ws/src/robot -DCMAKE_INSTALL_PREFIX=/home/jd/Workspaces/stewart_ws/src/robot/install/robot
+[1.884s] -- The C compiler identification is GNU 11.3.0
+[3.194s] -- The CXX compiler identification is GNU 11.3.0
+[3.335s] -- Detecting C compiler ABI info
+[4.346s] -- Detecting C compiler ABI info - done
+[4.401s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.409s] -- Detecting C compile features
+[4.418s] -- Detecting C compile features - done
+[4.458s] -- Detecting CXX compiler ABI info
+[5.506s] -- Detecting CXX compiler ABI info - done
+[5.568s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.571s] -- Detecting CXX compile features
+[5.576s] -- Detecting CXX compile features - done
+[5.647s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[8.021s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[9.484s] -- Found rclpy: 3.3.8 (/opt/ros/humble/share/rclpy/cmake)
+[9.535s] -- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)
+[10.706s] -- Found rviz2: 11.2.5 (/opt/ros/humble/share/rviz2/cmake)
+[10.769s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[12.549s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[12.558s] -- Configured cppcheck include dirs: 
+[12.560s] -- Configured cppcheck exclude dirs and/or files: 
+[12.612s] -- Added test 'flake8' to check Python code syntax and style conventions
+[12.739s] -- Added test 'lint_cmake' to check CMake code style
+[12.804s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[13.248s] -- Added test 'uncrustify' to check C / C++ code style
+[13.251s] -- Configured uncrustify additional arguments: 
+[13.305s] -- Added test 'xmllint' to check XML markup files
+[13.353s] -- Configuring done
+[13.438s] -- Generating done
+[13.457s] -- Build files have been written to: /home/jd/Workspaces/stewart_ws/src/robot/build/robot
+[13.535s] Invoked command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jd/Workspaces/stewart_ws/src/robot -DCMAKE_INSTALL_PREFIX=/home/jd/Workspaces/stewart_ws/src/robot/install/robot
+[13.541s] Invoking command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jd/Workspaces/stewart_ws/src/robot/build/robot -- -j4 -l4
+[14.022s] Invoked command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jd/Workspaces/stewart_ws/src/robot/build/robot -- -j4 -l4
+[14.435s] Invoking command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jd/Workspaces/stewart_ws/src/robot/build/robot
+[14.556s] -- Install configuration: ""
+[14.558s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/end_effector_tf.py
+[14.560s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/constant_end_effector_publisher.py
+[14.561s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/servo_angle_calculator.py
+[14.562s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/fixed_frame_broadcaster.py
+[14.577s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/serial_communication.py
+[14.580s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/animation_player.py
+[14.582s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/gui.py
+[14.588s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/gui2.py
+[14.590s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/robot/servo_angle_gui.py
+[14.593s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//launch
+[14.595s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//launch/robot.launch.py
+[14.604s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//launch/urdf.launch.py
+[14.605s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//launch/end_effector.launch.py
+[14.609s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//launch/display_confiv.rviz
+[14.619s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//urdf
+[14.622s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//urdf/robot_arms.xacro
+[14.623s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//urdf/robot_long_arms.xacro
+[14.636s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//urdf/robot_base.xacro
+[14.641s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//urdf/robot.urdf.xacro
+[14.643s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot//urdf/robot_end_effector.xacro
+[14.645s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/ament_index/resource_index/package_run_dependencies/robot
+[14.654s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/ament_index/resource_index/parent_prefix_path/robot
+[14.657s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/environment/ament_prefix_path.sh
+[14.665s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/environment/ament_prefix_path.dsv
+[14.666s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/environment/path.sh
+[14.670s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/environment/path.dsv
+[14.678s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/local_setup.bash
+[14.683s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/local_setup.sh
+[14.691s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/local_setup.zsh
+[14.696s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/local_setup.dsv
+[14.698s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.dsv
+[14.704s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/ament_index/resource_index/packages/robot
+[14.706s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/cmake/robotConfig.cmake
+[14.714s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/cmake/robotConfig-version.cmake
+[14.719s] -- Installing: /home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.xml
+[14.741s] Invoked command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jd/Workspaces/stewart_ws/src/robot/build/robot

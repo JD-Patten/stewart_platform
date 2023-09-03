@@ -1,0 +1,106 @@
+[6.269s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[6.270s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa354d510>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa34773a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa34773a0>>)
+[6.821s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[6.823s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[6.824s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[6.825s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[6.826s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[6.827s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[6.829s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jd/Workspaces/stewart_ws/src/robot'
+[6.831s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[6.832s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[6.834s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[6.835s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[6.836s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[6.837s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[6.838s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[6.839s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[6.839s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[7.021s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'robot'
+[7.022s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[7.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[7.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[7.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[7.023s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[7.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[7.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[7.422s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/jd/Workspaces/stewart_ws/src/install
+[7.444s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 275 installed packages in /opt/ros/humble
+[7.458s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[8.455s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'cmake_args' from command line to 'None'
+[8.456s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'cmake_target' from command line to 'None'
+[8.456s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[8.456s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'cmake_clean_cache' from command line to 'False'
+[8.457s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'cmake_clean_first' from command line to 'False'
+[8.457s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'cmake_force_configure' from command line to 'False'
+[8.457s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'ament_cmake_args' from command line to 'None'
+[8.457s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'catkin_cmake_args' from command line to 'None'
+[8.457s] Level 5:colcon.colcon_core.verb:set package 'robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[8.457s] DEBUG:colcon.colcon_core.verb:Building package 'robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jd/Workspaces/stewart_ws/src/robot/build/robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jd/Workspaces/stewart_ws/src/robot/install/robot', 'merge_install': False, 'path': '/home/jd/Workspaces/stewart_ws/src/robot', 'symlink_install': False, 'test_result_base': None}
+[8.462s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[8.501s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[8.505s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jd/Workspaces/stewart_ws/src/robot' with build type 'ament_cmake'
+[8.507s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jd/Workspaces/stewart_ws/src/robot'
+[8.633s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[8.634s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.635s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.757s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jd/Workspaces/stewart_ws/src/robot -DCMAKE_INSTALL_PREFIX=/home/jd/Workspaces/stewart_ws/src/robot/install/robot
+[22.058s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jd/Workspaces/stewart_ws/src/robot -DCMAKE_INSTALL_PREFIX=/home/jd/Workspaces/stewart_ws/src/robot/install/robot
+[22.063s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jd/Workspaces/stewart_ws/src/robot/build/robot -- -j4 -l4
+[22.544s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jd/Workspaces/stewart_ws/src/robot/build/robot -- -j4 -l4
+[22.957s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jd/Workspaces/stewart_ws/src/robot/build/robot
+[23.253s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot)
+[23.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jd/Workspaces/stewart_ws/src/robot/build/robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jd/Workspaces/stewart_ws/src/robot/build/robot
+[23.356s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot' for CMake module files
+[23.361s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot' for CMake config files
+[23.363s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot', 'cmake_prefix_path')
+[23.372s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/hook/cmake_prefix_path.ps1'
+[23.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/hook/cmake_prefix_path.dsv'
+[23.388s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/hook/cmake_prefix_path.sh'
+[23.394s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib'
+[23.396s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/bin'
+[23.397s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/pkgconfig/robot.pc'
+[23.399s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/python3.10/site-packages'
+[23.403s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/bin'
+[23.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.ps1'
+[23.423s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.dsv'
+[23.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.sh'
+[23.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.bash'
+[23.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.zsh'
+[23.474s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/colcon-core/packages/robot)
+[23.813s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot)
+[23.831s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot' for CMake module files
+[23.838s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot' for CMake config files
+[23.841s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot', 'cmake_prefix_path')
+[23.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/hook/cmake_prefix_path.ps1'
+[23.864s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/hook/cmake_prefix_path.dsv'
+[23.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/hook/cmake_prefix_path.sh'
+[23.881s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib'
+[23.883s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/bin'
+[23.884s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/pkgconfig/robot.pc'
+[23.888s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/lib/python3.10/site-packages'
+[23.892s] Level 1:colcon.colcon_core.environment:checking '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/bin'
+[23.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.ps1'
+[23.915s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.dsv'
+[23.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.sh'
+[23.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.bash'
+[23.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/robot/package.zsh'
+[23.943s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jd/Workspaces/stewart_ws/src/robot/install/robot/share/colcon-core/packages/robot)
+[23.950s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[23.957s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[23.958s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[23.960s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[24.068s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[24.071s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[24.072s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[24.317s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[24.327s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jd/Workspaces/stewart_ws/src/robot/install/local_setup.ps1'
+[24.354s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jd/Workspaces/stewart_ws/src/robot/install/_local_setup_util_ps1.py'
+[24.362s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jd/Workspaces/stewart_ws/src/robot/install/setup.ps1'
+[24.374s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jd/Workspaces/stewart_ws/src/robot/install/local_setup.sh'
+[24.379s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jd/Workspaces/stewart_ws/src/robot/install/_local_setup_util_sh.py'
+[24.383s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jd/Workspaces/stewart_ws/src/robot/install/setup.sh'
+[24.413s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jd/Workspaces/stewart_ws/src/robot/install/local_setup.bash'
+[24.421s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jd/Workspaces/stewart_ws/src/robot/install/setup.bash'
+[24.444s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jd/Workspaces/stewart_ws/src/robot/install/local_setup.zsh'
+[24.454s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jd/Workspaces/stewart_ws/src/robot/install/setup.zsh'
