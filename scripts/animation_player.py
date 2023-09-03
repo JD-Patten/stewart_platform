@@ -41,6 +41,7 @@ class AnimationPlayer(Node):
 
         self.read_animation_from_txt()  
         self.frame = 0
+        self.num_frames
 
         self.pub = self.create_publisher(Pose, "end_effector_pose", 1)     
         self.timer = self.create_timer(1/self.framerate, self.publish_animation) 
@@ -53,8 +54,9 @@ class AnimationPlayer(Node):
 
 
         # Construct the path to the input file relative to the script's directory
-        input_file_path = os.path.join(script_dir, "../../share/robot/animation", filename)
-
+        #input_file_path = os.path.join(script_dir, "../../share/robot/animation", filename)
+        input_file_path = os.path.join("/home/jd/Workspaces/stewart_ws/src/robot/animation", filename)
+        
         # Open the input file
         input_file = open(input_file_path, "r")
 
@@ -71,8 +73,8 @@ class AnimationPlayer(Node):
             if line.startswith("Framerate: "):
                 self.framerate = int(line.split(" ")[1])
 
-            if line.startswith("Number of Frames: "):
-                self.num_frames = int(line.split(" ")[1])
+            if line.startswith("Number of frames: "):
+                self.num_frames = int(line.split(": ")[1])
 
             # If the line starts with "Frame ", it contains the frame number
             if line.startswith("Frame "):
