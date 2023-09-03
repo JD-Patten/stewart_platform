@@ -9,8 +9,7 @@ import os
 
 
 
-FRAMERATE = 60
-filename = "animation1.txt"
+filename = "animation4.txt"
 
 def quaternion_from_euler(ai, aj, ak):
     ai /= 2.0
@@ -44,7 +43,7 @@ class AnimationPlayer(Node):
         self.frame = 0
 
         self.pub = self.create_publisher(Pose, "end_effector_pose", 1)     
-        self.timer = self.create_timer(1/FRAMERATE, self.publish_animation) 
+        self.timer = self.create_timer(1/self.framerate, self.publish_animation) 
 
     def read_animation_from_txt(self):
 
@@ -68,6 +67,13 @@ class AnimationPlayer(Node):
 
         # Loop through each line in the file
         for line in input_file.readlines():
+
+            if line.startswith("Framerate: "):
+                self.framerate = int(line.split(" ")[1])
+
+            if line.startswith("Number of Frames: "):
+                self.num_frames = int(line.split(" ")[1])
+
             # If the line starts with "Frame ", it contains the frame number
             if line.startswith("Frame "):
                 # If this is not the first frame, add the previous frame data to the animation data list
@@ -120,8 +126,8 @@ class AnimationPlayer(Node):
         pose.orientation = Quaternion(x=q[0], y=q[1], z=q[2], w=q[3])
         self.pub.publish(pose)
         self.frame += 1
-        if self.frame == 239:
-            self.frame = 0       
+        if self.frame == self.num_frames - 1:
+            self.frame = 1       
         
 
 

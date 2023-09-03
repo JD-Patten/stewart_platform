@@ -6,6 +6,11 @@ cube = bpy.data.objects["Cube"]
 # Open the output file for writing
 output_file = open(r"C:\Users\jpatt\Documents\Projects\Blender\cube_animation3.txt", "w")
 
+# Write framerate and number of frames to the output file
+output_file.write("Framerate: " + str(bpy.context.scene.render.fps) + "\n")
+output_file.write("Number of frames: " + str(bpy.context.scene.frame_end - bpy.context.scene.frame_start + 1) + "\n")
+
+
 # Loop through every frame in the animation
 for frame in range(bpy.context.scene.frame_start, bpy.context.scene.frame_end + 1):
     
