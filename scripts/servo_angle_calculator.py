@@ -69,11 +69,8 @@ class FrameListener(Node):
                 z = t.transform.translation.z 
 
 
-                
-                angle= self.solve_for_angle(x, y, z)
+                angle = self.solve_for_angle(x, y, z)
                 angles[i] = angle
-                
-
 
             self.publish_joint_states(angles)
 
@@ -96,22 +93,16 @@ class FrameListener(Node):
 
         return
 
-    def solve_for_angle(self, x, y, z):
+    def solve_for_angle(self, x, y, z):     
 
-        x2 = y
-        y2 = z
-        z2 = x
+        #Inverse Kinematics Equations
+        #adding and subtracting the acos portion decides which of the two possible solutions to choose
+        #using if z < 0 uses different solutions for the upside down servos. this keeps the arms pointing outwards
         
-        #solution1 = 2.0*math.atan((100000.0*y2 - 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))
-        #solution2 = 2.0*math.atan((100000.0*y2 + 1414213.56237309*math.sqrt(-0.5*x2**4 - x2**2*y2**2 - x2**2*z2**2 + 0.020189*x2**2 - 0.5*y2**4 - y2**2*z2**2 + 0.020189*y2**2 - 0.5*z2**4 + 0.015189*z2**2 - 0.0001153528605))/(1000000.0*x2**2 + 100000.0*x2 + 1000000.0*y2**2 + 1000000.0*z2**2 - 15189.0))            
-        
-        solution1 = 2*math.atan((2*l1*y2 - math.sqrt(-l1**4 + 2*l1**2*l2**2 + 2*l1**2*x2**2 + 2*l1**2*y2**2 - 2*l1**2*z2**2 - l2**4 + 2*l2**2*x2**2 + 2*l2**2*y2**2 + 2*l2**2*z2**2 - x2**4 - 2*x2**2*y2**2 - 2*x2**2*z2**2 - y2**4 - 2*y2**2*z2**2 - z2**4))/(l1**2 + 2*l1*x2 - l2**2 + x2**2 + y2**2 + z2**2))
-        solution2 = 2*math.atan((2*l1*y2 + math.sqrt(-l1**4 + 2*l1**2*l2**2 + 2*l1**2*x2**2 + 2*l1**2*y2**2 - 2*l1**2*z2**2 - l2**4 + 2*l2**2*x2**2 + 2*l2**2*y2**2 + 2*l2**2*z2**2 - x2**4 - 2*x2**2*y2**2 - 2*x2**2*z2**2 - y2**4 - 2*y2**2*z2**2 - z2**4))/(l1**2 + 2*l1*x2 - l2**2 + x2**2 + y2**2 + z2**2))
-
-        if abs(solution1) < abs(solution2):
-            angle = solution1
+        if z < 0:
+            angle = math.atan2(z,y) + math.acos((l2**2 - y**2 - z**2 - x**2 - l1**2) / (-2 * l1 * math.sqrt(y**2 + z**2)))
         else:
-            angle = solution2
+            angle = math.atan2(z,y) - math.acos((l2**2 - y**2 - z**2 - x**2 - l1**2) / (-2 * l1 * math.sqrt(y**2 + z**2)))
 
         return angle
     
