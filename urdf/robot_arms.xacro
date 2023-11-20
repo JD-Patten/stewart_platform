@@ -4,7 +4,7 @@
 
 
     <xacro:property name="short_arm_length" value="0.075"/>
-    <xacro:property name="long_arm_length" value="0.133"/>
+    <xacro:property name="long_arm_length" value="0.190"/>
 
     <xacro:macro name="short_arm_link" params="link_name">
         <link name="${link_name}">
@@ -40,6 +40,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <xacro:short_arm_link link_name="short_arm1_link"/>
@@ -50,6 +51,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <xacro:short_arm_link link_name="short_arm2_link"/>
@@ -61,6 +63,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <xacro:short_arm_link link_name="short_arm3_link"/>
@@ -72,6 +75,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
     
     <xacro:short_arm_link link_name="short_arm4_link"/>
@@ -83,6 +87,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <xacro:short_arm_link link_name="short_arm5_link"/>
@@ -93,6 +98,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <xacro:short_arm_link link_name="short_arm6_link"/>

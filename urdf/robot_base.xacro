@@ -36,9 +36,10 @@
         <visual>
             <material name="white"/>
             <geometry>
-                <mesh filename="package://robot/urdf/simplified_base_model.stl"/>
+                <cylinder length = "0.04" radius = "0.06"/>
+                <!-- <mesh filename="package://robot/urdf/simplified_base_model.stl"/> -->
             </geometry>
-            <origin xyz="0 0 0" rpy="0 0 -0.523"/>
+            <origin xyz="0 0 0.02" rpy="0 0 -0.523"/>
         </visual>
 
         <collision>
