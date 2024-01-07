@@ -16,8 +16,8 @@ from sensor_msgs.msg import JointState
 
 
 
-l1 = 77 * 0.001 # mm to m
-l2 = 235 *0.001 # mm to m
+l1 = 65 * 0.001 # mm to m 
+l2 = 194 *0.001 # mm to m
 
 # servo1_offset = math.radians(0.0)
 # servo2_offset = math.radians(-15.0)

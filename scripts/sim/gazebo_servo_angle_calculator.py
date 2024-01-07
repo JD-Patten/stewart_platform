@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 
 import math
-import sympy
-from sympy import Eq, Symbol as sym, solve
-
-from geometry_msgs.msg import Twist
 
 import rclpy
 from rclpy.node import Node
@@ -16,8 +12,8 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
 
 
-l1 = 77 * 0.001 # mm to m
-l2 = 235 *0.001 # mm to m
+l1 = 65  * 0.001 # mm to m
+l2 = 194 * 0.001 # mm to m
 
 # servo1_offset = math.radians(0.0)
 # servo2_offset = math.radians(-15.0)
@@ -31,14 +27,14 @@ class FrameListener(Node):
     def __init__(self):
         super().__init__('inverse_kinematics_node')
 
+        #initial angles
+        self.previous_angles = [0,0,0,0,0,0]
+
         # Declare and acquire `target_frame` parameter
         self.pub = self.create_publisher(JointTrajectory, "set_joint_trajectory", 1)     #creates a publisher with JointTrajectory msg type, "hello_world" topic name, and qos profile size of 10 (queue size of 10)
 
-        self.servo_positions = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-        #self.solveInverseKinematicsEquation()
 
         # Call on_timer function every second
         self.timer = self.create_timer(0.03, self.on_timer)
