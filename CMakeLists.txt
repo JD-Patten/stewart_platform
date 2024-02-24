@@ -17,17 +17,22 @@ find_package(rviz2 REQUIRED)
 install(PROGRAMS
 scripts/end_effector_tf.py
 scripts/constant_end_effector_publisher.py
-scripts/servo_angle_calculator.py
+scripts/inverse_kinematics.py
+scripts/inverse_kinematics_with_long_arms.py
 scripts/fixed_frame_broadcaster.py
 scripts/serial_communication.py
 scripts/animation_player.py
 scripts/gui.py
 scripts/gui2.py
 scripts/servo_angle_gui.py
+scripts/sim/gazebo_servo_angle_calculator.py
+scripts/sim/gazebo_angle_gui.py
+scripts/sim/sim.py
 DESTINATION lib/${PROJECT_NAME}
 )
 
 install (DIRECTORY
+  config
   launch
   urdf
   DESTINATION share/${PROJECT_NAME}/

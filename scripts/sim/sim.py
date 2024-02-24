@@ -1,17 +1,19 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from gazebo_msgs.srv import SpawnEntity, DeleteEntity, GetModelList
 from std_srvs.srv import Empty
 from geometry_msgs.msg import Pose, Point, Quaternion
 from rosgraph_msgs.msg import Clock
-import tkinter as tk
 import time
 import math
 import numpy as np
+import random
 
 class EntityHandlerNode(Node):
     def __init__(self):
-        super().__init__('entity_handler_node')
+        super().__init__('simulation_node')
         #create publisher to end_effector_pose
         self.pub = self.create_publisher(Pose, "end_effector_pose", 1) 
 
@@ -29,21 +31,27 @@ class EntityHandlerNode(Node):
         while not self.delete_entity_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Waiting for the /delete_entity service to be available...')
 
-                                # amplitude, period, position shift, time shift
-        self.default_parameters=   [[0,         0,          0,          0, ],   #x
-                                    [0,         0,          0,          0, ],   #y
-                                    [0,         0,        230,          0, ],   #z
-                                    [0,         0,          0,          0, ],   #pitch
-                                    [0,         0,          0,          0, ],   #roll
-                                    [0,         0,          0,          0, ]]   #yaw
+                                #amplitude,   period,   position shift,   time shift
+        self.default_parameters =  [[0,         0,             0,              0 ],   #x
+                                    [0,         0,             0,              0 ],   #y
+                                    [0,         0,           230,              0 ],   #z
+                                    [0,         0,             0,              0 ],   #pitch
+                                    [0,         0,             0,              0 ],   #roll
+                                    [0,         0,             0,              0 ]]   #yaw
         
-        self.parameters=           [[0,         5,          0,          0, ],   #x
-                                    [0,         5,          0,          0, ],   #y
-                                    [10,        5,        240,          0, ],   #z
-                                    [0,         5,          0,          0, ],   #pitch
-                                    [0,         5,          0,          0, ],   #roll
-                                    [0,         5,          0,          0, ]]   #yaw
+        self.limits =              [[[0,20],     [4,16],     [-20,20],       [-20,20]],   #x
+                                    [[0,20],     [4,16],     [-20,20],       [-20,20]],   #y
+                                    [[0,20],     [4,16],     [200,250],      [-20,20]],   #z
+                                    [[0,20],     [4,16],     [-10,10],       [-20,20]],   #pitch
+                                    [[0,20],     [4,16],     [-10,10],       [-20,20]],   #roll
+                                    [[0,20],     [4,16],     [-10,10],       [-20,20]]]   #yaw
+        
+        self.randomize_parameters()
+
+
         #spawn first robot
+        self.reset_sim()
+        time.sleep(3)
         self.spawn_entity()
 
         #used to measure since robot was spawned
@@ -57,6 +65,16 @@ class EntityHandlerNode(Node):
             durability=rclpy.qos.DurabilityPolicy.VOLATILE
         )
         self.clock_sub = self.create_subscription(Clock, 'clock', self.clock_sub_callback, qos_profile=qos_profile)
+
+    def randomize_parameters(self):
+        self.random_parameters = []
+        for dof in range(6):
+            values = []
+            for value in range(4):
+                values.append(random.randint(self.limits[dof][value][0],self.limits[dof][value][1]))
+            self.random_parameters.append(values)
+
+        self.get_logger().info(f'randomized_parameters = {self.random_parameters}')
 
     def spawn_entity(self):     
 
@@ -86,7 +104,6 @@ class EntityHandlerNode(Node):
 
     def reset_sim(self):
         request = Empty.Request()
-
         future = self.reset_sim_client.call_async(request)
 
         self.simulation_reset = True
@@ -116,33 +133,45 @@ class EntityHandlerNode(Node):
         msg.position = Point(x=x, y=y, z=z)
         msg.orientation = Quaternion(x=q[0], y=q[1], z=q[2], w=q[3])
         self.pub.publish(msg)
-        self.get_logger().info(f'Published slider value: {msg.position}')
+        self.get_logger().debug(f'Published slider value: {msg.position}')
 
     def clock_sub_callback(self, msg):
         seconds = msg.clock.sec 
         nanoseconds = msg.clock.nanosec
         time = seconds + nanoseconds * 0.000000001
         time_alive = time - self.start_time
-        print(time_alive)
+        self.get_logger().debug(f'time in cycle: {time_alive}')
 
         #set values for end effector pose
         values = []
 
         for dof in range(6):
-            amplitude =         self.parameters[dof][0]
-            period =            self.parameters[dof][1]
-            position_shift =    self.parameters[dof][2]
-            time_shift =        self.parameters[dof][3]
+            amplitude =         self.random_parameters[dof][0]
+            period =            self.random_parameters[dof][1]
+            position_shift =    self.random_parameters[dof][2]
+            time_shift =        self.random_parameters[dof][3]
 
+
+
+            #set a ramp up time so that arms start in standard position and ramp up to their full movements
+            ramp_up_time = 3
+            if time_alive < ramp_up_time:
+                amplitude *= time_alive / ramp_up_time
+                position_shift = self.default_parameters[dof][2] + (position_shift - self.default_parameters[dof][2])* (time_alive / ramp_up_time)
+            
+        
             value = amplitude * math.cos((math.pi * 2 / period) * (time_alive + time_shift)) + position_shift
             values.append(value)
+
+
         #publish angles
         self.publish_values(values)
 
-        if time_alive > 10:
+        if time_alive > 20:
             self.delete_entity()
 
-        if time_alive >15:
+        if time_alive >23:
+            self.randomize_parameters()
             self.start_time = time
             self.spawn_entity()
 

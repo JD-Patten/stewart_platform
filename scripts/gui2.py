@@ -68,7 +68,7 @@ class SliderPublisher(Node):
                         FrameCreator(self.root, "Yaw")]
         
         self.frames[2].position_offset_entry.delete(0,tk.END)
-        self.frames[2].position_offset_entry.insert(0,"270")
+        self.frames[2].position_offset_entry.insert(0,"230")
 
         for frame in self.frames:
             frame.frame.pack(padx=5,pady=5)

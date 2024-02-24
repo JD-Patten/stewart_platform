@@ -19,13 +19,8 @@ def generate_launch_description():
         ),
 
         ExecuteProcess(
-            cmd=['ros2', 'launch', 'gazebo_ros', 'gazebo.launch.py', 'world:=src/robot_testing/worlds/world6.world'],
+            cmd=['ros2', 'launch', 'gazebo_ros', 'gazebo.launch.py', 'gui:=true'],
             output="screen"
         )
-        #,
-       # ExecuteProcess(
-        #    cmd=['ros2', 'run', 'gazebo_ros', 'spawn_entity.py', '-topic', 'robot_description', '-entity', 'some_name'],
-        #    output="screen"
-        #),
     ])
 

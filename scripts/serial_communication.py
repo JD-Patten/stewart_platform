@@ -10,6 +10,13 @@ import serial
 import time
 import math
 
+offset1 = -5
+offset2 = 0
+offset3 = 2
+offset4 = 0
+offset5 = 4
+offset6 = -1
+
 
 class SerialComNode(Node):
     def __init__(self):
@@ -23,6 +30,8 @@ class SerialComNode(Node):
         self.angle4 = 90
         self.angle5 = 90
         self.angle6 = 90
+
+
 
         print("Setting Up Serial Communication...")
         self.ser = serial.Serial('/dev/ttyUSB0', 57600)
@@ -60,12 +69,12 @@ class SerialComNode(Node):
 
     def broadcast(self):
 
-        pos1 = 90 + self.angle1
-        pos2 = 90 + self.angle2
-        pos3 = 90 + self.angle3
-        pos4 = 90 + self.angle4
-        pos5 = 90 + self.angle5
-        pos6 = 90 + self.angle6
+        pos1 = 90 + self.angle1 + offset1
+        pos2 = 90 + self.angle2 - offset2
+        pos3 = 90 + self.angle3 + offset3
+        pos4 = 90 + self.angle4 - offset4
+        pos5 = 90 + self.angle5 + offset5
+        pos6 = 90 + self.angle6 - offset6
 
         #print(pos1 + 'a' + pos2 + 'b' + pos3 + 'c' + pos4 + 'd' + pos5 + 'e' + pos6 + '\n')
         self.ser.write(str.encode(str(pos1) + 'a' + str(pos2) + 'b' + str(pos3) + 'c' + str(pos4) + 'd' + str(pos5) + 'e' + str(pos6) + '\n'))

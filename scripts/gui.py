@@ -28,7 +28,7 @@ class SliderPublisher(Node):
         
         self.zLabel = tk.Label(self.root, text= "Z (mm)" )
         self.zLabel.grid(row=5, column=1, padx =10, pady = 10)
-        self.zSlider = tk.Scale(self.root, from_=170, to=370, length = 400, orient=tk.HORIZONTAL, command=self.publish_slider_value)
+        self.zSlider = tk.Scale(self.root, from_=150, to=350, length = 400, orient=tk.HORIZONTAL, command=self.publish_slider_value)
         self.zSlider.grid(row=6, column=1, padx =10, pady = 10)
 
         self.aLabel = tk.Label(self.root, text= "Pitch (deg)" )
@@ -55,7 +55,7 @@ class SliderPublisher(Node):
     def reset_sliders(self):
         self.xSlider.set(0)
         self.ySlider.set(0)
-        self.zSlider.set(270)
+        self.zSlider.set(250)
         self.aSlider.set(0)
         self.bSlider.set(0)
         self.cSlider.set(0)

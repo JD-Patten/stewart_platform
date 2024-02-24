@@ -3,22 +3,22 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 
-    <xacro:property name="short_arm_length" value="0.075"/>
-    <xacro:property name="long_arm_length" value="0.190"/>
+    <xacro:property name="short_arm_length" value="0.065"/>
+    <xacro:property name="long_arm_length" value="0.194"/>
 
     <xacro:macro name="short_arm_link" params="link_name">
         <link name="${link_name}">
             <visual>
                 <material name="white"/>
                 <geometry>
-                    <cylinder length = "${short_arm_length}" radius = "0.005"/>
+                    <cylinder length = "${short_arm_length}" radius = "0.004"/>
                 </geometry>
                 <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
             </visual>
 
             <collision>
                 <geometry>
-                    <cylinder length = "${short_arm_length}" radius = "0.005"/>
+                    <cylinder length = "${short_arm_length}" radius = "0.004"/>
                 </geometry>
                 <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
             </collision>

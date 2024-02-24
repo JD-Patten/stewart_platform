@@ -12,6 +12,51 @@
     <!-- Instead, we need to add gazebo tags for our links that refer to Gazebo materials -->
 
 
+    <gazebo reference="collision_link1">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="collision_link2">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="collision_link3">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="end_short_arm1_link">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="end_short_arm2_link">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="end_short_arm3_link">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="end_short_arm4_link">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="end_short_arm5_link">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
+    <gazebo reference="end_short_arm6_link">
+        <mu1>0.2</mu1>
+        <mu2>0.3</mu2>
+    </gazebo>
+
     <gazebo reference="base_link">
         <material>Gazebo/Green</material>
     </gazebo>
@@ -95,7 +140,7 @@
     <gazebo>
         <plugin name="gazebo_ros_joint_pose_trajectory"
             filename="libgazebo_ros_joint_pose_trajectory.so">
-            <update_rate>20</update_rate>
+            <!--#<update_rate>20</update_rate>-->
         </plugin>
     </gazebo>
 

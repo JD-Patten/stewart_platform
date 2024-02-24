@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+    <xacro:property name="short_arm_length" value="0.065"/>
+    <xacro:property name="long_arm_length" value="0.194"/>
+
+
+<!--macro for setting up arm link and joint-->
+
+    <xacro:macro name="short_arm" params="link_name joint_name parent_link">
+
+        <joint name="${joint_name}" type="revolute">
+            <parent link="${parent_link}"/>
+            <child link="${link_name}"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="-1.5708" upper="1.5708" effort=".12" velocity="5"/>
+            <dynamics damping="1.0" friction="0.2"/>
+        </joint>
+
+        <link name="${link_name}">
+            <visual>
+                <material name="white"/>
+                <geometry>
+                    <cylinder length = "${short_arm_length}" radius = "0.005"/>
+                </geometry>
+                <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+            </visual>
+
+            <inertial>
+                <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+                <mass value="0.060"/>
+                <inertia
+                    ixx="0.00001" ixy="0.0" ixz="0.0"
+                    iyy="0.0000065" iyz="0.0"
+                    izz="0.0000125"/>
+            </inertial>
+        </link>
+        
+        <joint name="end_${joint_name}" type="fixed">
+            <parent link="${link_name}" />
+            <child link="end_${link_name}"/>
+            <origin xyz="0 ${short_arm_length} 0"/>
+        </joint>
+
+        <link name="end_${link_name}">
+            <visual>
+                <material name="white"/>
+                <geometry>
+                    <sphere radius="0.0075"/>
+                </geometry>  
+            </visual>
+
+            <collision>
+                <geometry>
+                    <sphere radius="0.0075"/>
+                </geometry>  
+            </collision> 
+
+            <inertial>
+                <origin xyz="0.0 0.0 0.0"/>      
+                <mass value="0.01"/>
+                <inertia
+                    ixx="0.000002" ixy="0.0" ixz="0.0"
+                    iyy="0.000002" iyz="0.0"
+                    izz="0.000002"/>
+            </inertial> 
+        </link> 
+
+        
+    </xacro:macro>
+
+
+<!--call short_arm macro to create all 6 arms-->
+
+    <xacro:short_arm link_name="short_arm1_link" joint_name="short_arm1_joint" parent_link="servo1_link"/>
+
+    <xacro:short_arm link_name="short_arm2_link" joint_name="short_arm2_joint" parent_link="servo2_link"/>
+
+    <xacro:short_arm link_name="short_arm3_link" joint_name="short_arm3_joint" parent_link="servo3_link"/>
+
+    <xacro:short_arm link_name="short_arm4_link" joint_name="short_arm4_joint" parent_link="servo4_link"/>
+
+    <xacro:short_arm link_name="short_arm5_link" joint_name="short_arm5_joint" parent_link="servo5_link"/>
+
+    <xacro:short_arm link_name="short_arm6_link" joint_name="short_arm6_joint" parent_link="servo6_link"/>
+
+
+</robot>

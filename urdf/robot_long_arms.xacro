@@ -1,210 +1,86 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
-    
-    <joint name="long_arm1_joint_x" type="revolute">
-        <parent link="short_arm1_link"/>
-        <child link="long_arm1_link"/>
-        <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
 
-    <link name="long_arm1_link">
-        <visual>
-            <geometry>
-                <sphere radius="0.006"/>
-            </geometry>
-            <origin xyz="0 0 0"/>
-        </visual>
-    </link>
 
-    <joint name="long_arm1_joint_z" type="revolute">
-        <parent link="long_arm1_link"/>
-        <child link="long_arm1_link2"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
+    <xacro:property name="short_arm_length" value="0.065"/>
+    <xacro:property name="long_arm_length" value="0.194"/>
 
-    <link name="long_arm1_link2">
-        <visual>
-            <geometry>
-                <cylinder length = "${long_arm_length}" radius = "0.003"/>
-            </geometry>
-            <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
-        </visual>
-    </link>
 
-    <joint name="long_arm2_joint_x" type="revolute">
-        <parent link="short_arm2_link"/>
-        <child link="long_arm2_link"/>
-        <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
 
-    <link name="long_arm2_link">
-        <visual>
-            <geometry>
-                <sphere radius="0.006"/>
-            </geometry>
-            <origin xyz="0 0 0"/>
-        </visual>
-    </link>
+    <xacro:macro name="long_arm" params="number">
 
-    <joint name="long_arm2_joint_z" type="revolute">
-        <parent link="long_arm2_link"/>
-        <child link="long_arm2_link2"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
+<!--ELBOW JOINT FOR X ROTATION-->
 
-    <link name="long_arm2_link2">
-        <visual>
-            <geometry>
-                <cylinder length = "${long_arm_length}" radius = "0.003"/>
-            </geometry>
-            <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
-        </visual>
-    </link>
+        <joint name="elbow${number}_x_joint" type="revolute">
+            <parent link="short_arm${number}_link"/>
+            <child link="elbow${number}_link"/>
+            <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="-1.5708" upper="1.5708" effort=".12" velocity="5"/>
+            <dynamics damping="1.0" friction="0.2"/>
+        </joint>
 
-    <joint name="long_arm3_joint_x" type="revolute">
-        <parent link="short_arm3_link"/>
-        <child link="long_arm3_link"/>
-        <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
 
-    <link name="long_arm3_link">
-        <visual>
-            <geometry>
-                <sphere radius="0.006"/>
-            </geometry>
-            <origin xyz="0 0 0"/>
-        </visual>
-    </link>
+    <!--ELBOW X LINK-->
 
-    <joint name="long_arm3_joint_z" type="revolute">
-        <parent link="long_arm3_link"/>
-        <child link="long_arm3_link2"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
+        <link name="elbow${number}_link">
+            <visual>
+                <material name="white"/>
+                <geometry>
+                    <sphere radius="0.005"/>
+                </geometry>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+            </visual>
 
-    <link name="long_arm3_link2">
-        <visual>
-            <geometry>
-                <cylinder length = "${long_arm_length}" radius = "0.003"/>
-            </geometry>
-            <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
-        </visual>
-    </link>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="0.060"/>
+                <inertia
+                    ixx="0.00001" ixy="0.0" ixz="0.0"
+                    iyy="0.0000065" iyz="0.0"
+                    izz="0.0000125"/>
+            </inertial>
+        </link>
 
-    <joint name="long_arm4_joint_x" type="revolute">
-        <parent link="short_arm4_link"/>
-        <child link="long_arm4_link"/>
-        <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
+    <!--ELBOW Z LINK-->
 
-    <link name="long_arm4_link">
-        <visual>
-            <geometry>
-                <sphere radius="0.006"/>
-            </geometry>
-            <origin xyz="0 0 0"/>
-        </visual>
-    </link>
+        <joint name="elbow${number}_y_joint" type="revolute">
+            <parent link="elbow${number}_link"/>
+            <child link="long_arm${number}_link"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit lower="-1.5708" upper="1.5708" effort=".12" velocity="5"/>
+            <dynamics damping="1.0" friction="0.2"/>
+        </joint>
 
-    <joint name="long_arm4_joint_z" type="revolute">
-        <parent link="long_arm4_link"/>
-        <child link="long_arm4_link2"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
 
-    <link name="long_arm4_link2">
-        <visual>
-            <geometry>
-                <cylinder length = "${long_arm_length}" radius = "0.003"/>
-            </geometry>
-            <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
-        </visual>
-    </link>
+        <link name="long_arm${number}_link">
+            <visual>
+                <material name="white"/>
+                <geometry>
+                    <cylinder length = "${long_arm_length}" radius = "0.0025"/>
+                </geometry>
+                <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+            </visual>
 
-    <joint name="long_arm5_joint_x" type="revolute">
-        <parent link="short_arm5_link"/>
-        <child link="long_arm5_link"/>
-        <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
+            <inertial>
+                <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+                <mass value="0.060"/>
+                <inertia
+                    ixx="0.00001" ixy="0.0" ixz="0.0"
+                    iyy="0.0000065" iyz="0.0"
+                    izz="0.0000125"/>
+            </inertial>
+        </link>
+    </xacro:macro>
 
-    <link name="long_arm5_link">
-        <visual>
-            <geometry>
-                <sphere radius="0.006"/>
-            </geometry>
-            <origin xyz="0 0 0"/>
-        </visual>
-    </link>
+    <xacro:long_arm number="1"/>
+    <xacro:long_arm number="2"/>
+    <xacro:long_arm number="3"/>
+    <xacro:long_arm number="4"/>
+    <xacro:long_arm number="5"/>
+    <xacro:long_arm number="6"/>
 
-    <joint name="long_arm5_joint_z" type="revolute">
-        <parent link="long_arm5_link"/>
-        <child link="long_arm5_link2"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
 
-    <link name="long_arm5_link2">
-        <visual>
-            <geometry>
-                <cylinder length = "${long_arm_length}" radius = "0.003"/>
-            </geometry>
-            <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
-        </visual>
-    </link>
-
-    <joint name="long_arm6_joint_x" type="revolute">
-        <parent link="short_arm6_link"/>
-        <child link="long_arm6_link"/>
-        <origin xyz="0 ${short_arm_length} 0" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
-
-    <link name="long_arm6_link">
-        <visual>
-            <geometry>
-                <sphere radius="0.006"/>
-            </geometry>
-            <origin xyz="0 0 0"/>
-        </visual>
-    </link>
-
-    <joint name="long_arm6_joint_z" type="revolute">
-        <parent link="long_arm6_link"/>
-        <child link="long_arm6_link2"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3" upper="3" effort="100" velocity="100"/>
-    </joint>
-
-    <link name="long_arm6_link2">
-        <visual>
-            <geometry>
-                <cylinder length = "${long_arm_length}" radius = "0.003"/>
-            </geometry>
-            <origin xyz="0 ${long_arm_length / 2 } 0" rpy="1.5708 0 0"/>
-        </visual>
-    </link>
-
-    
 </robot>
