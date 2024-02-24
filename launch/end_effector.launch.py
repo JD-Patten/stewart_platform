@@ -1,13 +1,14 @@
+# This is the launch file for the end effector TF2 frames.
+# It launches a dynamic frame for the center of the end effector 
+# and 6 static frames at the arm connection points on the end effector
+
+
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.actions import ExecuteProcess
-
-import math
 
 
-draftAngle = math.radians(-20) #degrees to radians
-servoHeight = 44 * .001       # mm to m
- 
+#x,y,z values for the connection points of the arms on the end effector
+
                                 #x            y           z   
 end_effector_arm_connections = [[-0.03153,    0.02461,    -0.0125], 
                                 [-0.00555,    0.03961,    -0.0125],
@@ -18,6 +19,9 @@ end_effector_arm_connections = [[-0.03153,    0.02461,    -0.0125],
 
 def generate_launch_description():
     return LaunchDescription([
+    
+
+        #launch the node to set up a dynamic frame for the center of the end effector
 
         Node(
             package='robot',
@@ -25,6 +29,9 @@ def generate_launch_description():
             name='end_effector_tf'
         ),
 
+
+        #launch 6 more nodes, each publishing a fixed frame at a connection point of one of the arms  and the top plate
+        
         Node(
             package='robot',
             executable='fixed_frame_broadcaster.py',
@@ -62,11 +69,5 @@ def generate_launch_description():
             parameters=[ {"parent_frame": 'end_effector'}, {"child_frame": 'arm6_end_connection'}, {"x_translation": end_effector_arm_connections[5][0]}, {"y_translation": end_effector_arm_connections[5][1]}, {"z_translation": end_effector_arm_connections[5][2]}]
         ),        
 
-
-
-        #Node(
-        #    package='rviz2',
-        #    executable='rviz2',
-        #)
     
     ])
