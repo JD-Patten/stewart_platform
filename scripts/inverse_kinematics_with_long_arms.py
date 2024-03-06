@@ -25,7 +25,7 @@ l2 = 194 * 0.001 # mm to m
 
 class FrameListener(Node):
     def __init__(self):
-        super().__init__('inverse_kinematics_node')
+        super().__init__('inverse_kinematics_node_with_long_arms')
 
         # Declare and acquire `target_frame` parameter
         self.pub = self.create_publisher(JointState, "joint_states", 1)     #creates a publisher with JointState msg type, "hello_world" topic name, and qos profile size of 10 (queue size of 10)
@@ -89,12 +89,14 @@ class FrameListener(Node):
 
             anglex = math.atan2(z - (l1 * math.sin(angle)), y - (l1 * math.cos(angle))) - angle + math.pi
 
+            angley = -1 * math.atan2(math.sqrt((y - (l1 * math.cos(angle)))**2 + (z - (l1 * math.sin(angle)))**2),x) - (math.pi/2)
+
         else:
             angle = math.atan2(z,y) - math.acos((l2**2 - y**2 - z**2 - x**2 - l1**2) / (-2 * l1 * math.sqrt(y**2 + z**2)))
 
             anglex = math.atan2(z - (l1 * math.sin(angle)), y - (l1 * math.cos(angle))) - angle
-
-        angley = math.atan2(x,z - (l1 * math.sin(angle))) * -1
+            
+            angley = math.atan2(math.sqrt((y - (l1 * math.cos(angle)))**2 + (z - (l1 * math.sin(angle)))**2),x) - (math.pi/2)
 
         return angle, anglex, angley
     
@@ -106,15 +108,15 @@ class FrameListener(Node):
         msg.header.frame_id = "" 
         msg.name = ["short_arm1_joint", "short_arm2_joint", "short_arm3_joint", "short_arm4_joint", "short_arm5_joint", "short_arm6_joint", 
                     "elbow1_x_joint", "elbow2_x_joint", "elbow3_x_joint", "elbow4_x_joint", "elbow5_x_joint", "elbow6_x_joint",
-                    "elbow1_y_joint", "elbow2_y_joint", "elbow3_y_joint", "elbow4_y_joint", "elbow5_y_joint", "elbow6_y_joint",]
+                    "elbow1_y_joint", "elbow2_y_joint", "elbow3_y_joint", "elbow4_y_joint", "elbow5_y_joint", "elbow6_y_joint"]
 
         
         msg.position = [servo_angles[0], servo_angles[1], servo_angles[2], 
                         servo_angles[3], servo_angles[4], servo_angles[5],
                         axs[0], axs[1], axs[2], axs[3], axs[4], axs[5],
-                        ays[0], ays[1], ays[2], ays[3], ays[4], ays[5]]
+                       ays[0], ays[1], ays[2], ays[3], ays[4], ays[5]]
 
-        
+
         msg.velocity = []
         msg.effort = []
 
