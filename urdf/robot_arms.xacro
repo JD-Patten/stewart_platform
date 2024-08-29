@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+    <xacro:property name="short_arm_length" value="0.065"/>
+    <xacro:property name="long_arm_length" value="0.194"/>
+
+    <xacro:macro name="short_arm_link" params="link_name">
+        <link name="${link_name}">
+            <visual>
+                <material name="white"/>
+                <geometry>
+                    <cylinder length = "${short_arm_length}" radius = "0.004"/>
+                </geometry>
+                <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+            </visual>
+
+            <collision>
+                <geometry>
+                    <cylinder length = "${short_arm_length}" radius = "0.004"/>
+                </geometry>
+                <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+            </collision>
+
+            <inertial>
+                <origin xyz="0 ${short_arm_length / 2 } 0" rpy="1.5708 0 0"/>
+                <mass value="0.060"/>
+                <inertia
+                    ixx="0.00001" ixy="0.0" ixz="0.0"
+                    iyy="0.0000065" iyz="0.0"
+                    izz="0.0000125"/>
+            </inertial>
+        </link>
+    </xacro:macro>
+
+    <joint name="short_arm1_joint" type="revolute">
+        <parent link="servo1_link"/>
+        <child link="short_arm1_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
+    </joint>
+
+    <xacro:short_arm_link link_name="short_arm1_link"/>
+    
+    <joint name="short_arm2_joint" type="revolute">
+        <parent link="servo2_link"/>
+        <child link="short_arm2_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
+    </joint>
+
+    <xacro:short_arm_link link_name="short_arm2_link"/>
+
+
+    <joint name="short_arm3_joint" type="revolute">
+        <parent link="servo3_link"/>
+        <child link="short_arm3_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
+    </joint>
+
+    <xacro:short_arm_link link_name="short_arm3_link"/>
+
+
+    <joint name="short_arm4_joint" type="revolute">
+        <parent link="servo4_link"/>
+        <child link="short_arm4_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
+    </joint>
+    
+    <xacro:short_arm_link link_name="short_arm4_link"/>
+
+
+    <joint name="short_arm5_joint" type="revolute">
+        <parent link="servo5_link"/>
+        <child link="short_arm5_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
+    </joint>
+
+    <xacro:short_arm_link link_name="short_arm5_link"/>
+
+    <joint name="short_arm6_joint" type="revolute">
+        <parent link="servo6_link"/>
+        <child link="short_arm6_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="100" velocity="100"/>
+        <dynamics damping="10.0" friction="10.0"/>
+    </joint>
+
+    <xacro:short_arm_link link_name="short_arm6_link"/>
+
+</robot>

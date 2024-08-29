@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:property name="servo_height" value="0.043"/>
+    <xacro:property name="draft_angle" value="-0.349066"/>
+
+    <xacro:property name="_120_degrees" value="2.0944"/>
+    <xacro:property name="_240_degrees" value="4.18879"/>
+    <xacro:property name="_180_degrees" value="3.14159"/>
+
+    <xacro:property name="servo1_x" value="-0.07159"/>
+    <xacro:property name="servo1_y" value="0.05282"/>
+    <xacro:property name="servo2_x" value="-0.00967"/>
+    <xacro:property name="servo2_y" value="0.08825"/>
+    <xacro:property name="servo3_x" value="0.08126"/>
+    <xacro:property name="servo3_y" value="0.03575"/>
+    <xacro:property name="servo4_x" value="0.08126"/>
+    <xacro:property name="servo4_y" value="-0.03567"/>
+    <xacro:property name="servo5_x" value="-0.00967"/>
+    <xacro:property name="servo5_y" value="-0.08825"/>
+    <xacro:property name="servo6_x" value="-0.07159"/>
+    <xacro:property name="servo6_y" value="-0.0525"/>
+ 
+
+    <material name="white">
+        <color rgba="0.95 0.95 0.95 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.2 0.2 0.2 1"/>
+    </material>
+
+
+    <link name="base_link">
+        <visual>
+            <material name="white"/>
+            <geometry>
+                <cylinder length = "0.04" radius = "0.06"/>
+                <!-- <mesh filename="package://robot/urdf/simplified_base_model.stl"/> -->
+            </geometry>
+            <origin xyz="0 0 0.02" rpy="0 0 -0.523"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder length = "0.04" radius = "0.06"/>
+            </geometry>
+            <origin xyz="0 0 0.02"/>        
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 1" rpy="0 0 0"/>
+            <mass value="0.15"/>
+            <inertia
+                ixx="0.00024" ixy="0.0" ixz="0.0"
+                iyy="0.00025" iyz="0.0"
+                izz="0.00041"/>
+        </inertial>
+
+    </link>
+
+    <xacro:macro name="servo_link" params="link_name">
+        <link name="${link_name}">
+            <visual>
+                <material name="black"/>
+                <geometry>
+                    <box size="0.030 0.040 0.020"/>
+                </geometry>
+                <origin xyz="-0.023 -0.010 0"/>      
+            </visual>
+
+            <collision>
+                <geometry>
+                    <box size="0.030 0.040 0.020"/>
+                </geometry>
+                <origin xyz="-0.023 -0.010 0"/>
+            </collision>
+
+            <inertial>
+                <origin xyz="-0.023 -0.010 0"/>
+                <mass value="0.060"/>
+                <inertia
+                    ixx="0.00001" ixy="0.0" ixz="0.0"
+                    iyy="0.0000065" iyz="0.0"
+                    izz="0.0000125"/>
+            </inertial>
+        </link>
+    </xacro:macro>
+
+    <joint name="servo1_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo1_link"/>
+        <origin xyz="${servo1_x} ${servo1_y} ${servo_height}" rpy="0 ${draft_angle} ${_120_degrees}"/>
+    </joint>
+
+    <xacro:servo_link link_name="servo1_link"/>
+
+    <joint name="servo2_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo2_link"/>
+        <origin xyz="${servo2_x} ${servo2_y} ${servo_height}" rpy="${_180_degrees} ${draft_angle} ${_120_degrees}"/>
+    </joint>
+
+    <xacro:servo_link link_name="servo2_link"/>
+
+    <joint name="servo3_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo3_link"/>
+        <origin xyz="${servo3_x} ${servo3_y} ${servo_height}" rpy="0 ${draft_angle} 0"/>
+    </joint>
+
+    <xacro:servo_link link_name="servo3_link"/>
+
+    <joint name="servo4_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo4_link"/>
+        <origin xyz="${servo4_x} ${servo4_y} ${servo_height}" rpy="${_180_degrees} ${draft_angle} 0"/>
+    </joint>
+
+    <xacro:servo_link link_name="servo4_link"/>
+
+
+    <joint name="servo5_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo5_link"/>
+        <origin xyz="${servo5_x} ${servo5_y} ${servo_height}" rpy="0 ${draft_angle} ${_240_degrees}"/>
+    </joint>
+
+    <xacro:servo_link link_name="servo5_link"/>
+
+
+    <joint name="servo6_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo6_link"/>
+        <origin xyz="${servo6_x} ${servo6_y} ${servo_height}" rpy="${_180_degrees} ${draft_angle} ${_240_degrees}"/>
+    </joint>
+
+    <xacro:servo_link link_name="servo6_link"/>
+
+
+
+</robot>
