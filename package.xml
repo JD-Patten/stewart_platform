@@ -3,7 +3,8 @@
 <package format="3">
   <name>stewart_platform</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>stewart_platform is a ROS2 Package for visualizing and controlling stewart platforms. Specifically stewart platforms 
+  where each arm is made up of two links (not ones with linear actuators)</description>
   <maintainer email="thejdrobotics@gmail.com">James Patten</maintainer>
   <license>Apache-2.0</license>
 
