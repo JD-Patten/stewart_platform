@@ -4,7 +4,7 @@ This is a ROS2 Package for visualizing and controlling stewart platforms. Specif
 This package was made for the robot in this [youtube video](https://www.youtube.com/watch?v=4MkSBwoUiGk&t=653s), but has the goal of being easily customizeable and expandable. 
 
 ## Need Help /  Want to Discuss
-Join the [Discord](https://discord.gg/4GBbg6FE)!
+Join the [Discord](https://discord.gg/rvP244n7ws)!
 
 If you have any reccomendations, want to help out with this project, or have any questions, I'll be happy to discuss more in the discord!
 
