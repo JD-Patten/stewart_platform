@@ -4,7 +4,7 @@
   <name>stewart_platform</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="jpatten252@gmail.com">jd</maintainer>
+  <maintainer email="thejdrobotics@gmail.com">James Patten</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
