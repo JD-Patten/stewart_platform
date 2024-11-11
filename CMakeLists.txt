@@ -17,6 +17,7 @@ scripts/fixed_frame_broadcaster.py
 scripts/gui.py
 scripts/inverse_kinematics.py
 scripts/serial_communication.py
+scripts/wifi_communication.py
 DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -12,12 +12,12 @@ from launch_ros.actions import Node
 #x,y,z values for the connection points of the arms on the end effector
 
                                 #x            y           z   
-end_effector_arm_connections = [[-0.03153,    0.02461,    -0.0125], 
-                                [-0.00555,    0.03961,    -0.0125],
-                                [0.03781,     0.015,      -0.0125],
-                                [0.03781,    -0.015,      -0.0125],
-                                [-0.00555,   -0.03961,    -0.0125],
-                                [-0.03153,   -0.02461,    -0.0125]]
+end_effector_arm_connections = [[ -0.0318,  0.0250,  -0.0125 ],
+                                [ -0.0058,  0.0400,  -0.0125 ],
+                                [ 0.0375,  0.0150,  -0.0125 ],
+                                [ 0.0375,  -0.0150,  -0.0125 ],
+                                [ -0.0058,  -0.0400,  -0.0125 ],
+                                [ -0.0318,  -0.0250,  -0.0125 ]]
 
 
 def generate_launch_description():

@@ -110,10 +110,10 @@ class SliderPublisher(Node):
                 frame.period_entry.insert(0, str(data['period']))
                 
                 frame.position_shift_entry.delete(0, tk.END)
-                frame.position_shift_entry.insert(0, str(data['position shift']))
+                frame.position_shift_entry.insert(0, str(data['position_shift']))
                 
                 frame.time_shift_entry.delete(0, tk.END)
-                frame.time_shift_entry.insert(0, str(data['time shift']))
+                frame.time_shift_entry.insert(0, str(data['time_shift']))
         except Exception as e:
             print(f"Error copying from dictionary: {e}")
 
